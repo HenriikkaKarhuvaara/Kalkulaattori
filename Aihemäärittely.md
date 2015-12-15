@@ -24,7 +24,7 @@ Siis tässä laskimessa käyttäjä näkee syöttämänsä lausekkeen, eli voi t
 En vielä tarkkaan tiedä, kuinka paljon laskutoimituksia laskimella on mahdollista laskea, ja mitä  erikoismerkkejä ( cos, murtoluvut, juuret, potenssit jne ) on valittavissa. Ja miten nämä ovat kirjoitettavissa näppäimistön avulla. (Määritelläänkö omat pikanäppäimet, vai käytetäänkö esim. latexista tuttuja \sqrt jne).
 
 
-**Käyttäjä:** Laskujen laskija
+**Käyttäjä:** Laskimen käyttäjä
 
 **Toiminnot:** 
 
