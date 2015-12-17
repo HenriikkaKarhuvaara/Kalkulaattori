@@ -1,2 +1,0 @@
-muokataan aihemäärittelyä
-
