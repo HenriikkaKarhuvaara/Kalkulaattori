@@ -15,9 +15,9 @@ Laskimessa on kaksi tekstikenttää. Toiseen käyttäjä syöttää lukuja, ja t
 * Käyttäjä syöttää luvun 3
   * Tuloskentässä: 3 + 3
 * Käyttäjä painaa =-nappia
-  * Syotekentässä: 3 + 3 = 6
+  * Tuloskentässä: 3 + 3 = 6
 * Käyttäjä painaa +-nappia
-  * Syotekentässä: 6 + 
+  * Tuloskentässä: 6 + 
 
 Siis tavoitteena on, että tässä laskimessa käyttäjä näkee syöttämänsä lausekkeen, eli voi tarkistaa, onko syöttänyt tiedot oikein. Tämä eroaa esim. Macin laskimesta, jossa lukuja on näkyvissä kerrallaan vain yksi, ja aiemmin syötettyjä lukuja ei pääse katsomaan. (Lisäksi lauseketta on mahdollista kumittaa, jos tämän tekeminen onnistuu. Tämäkin eroaa monesta laskimesta, jossa koko lauseke täytyy kirjoittaa uudelleen virheen sattuessa).
 
