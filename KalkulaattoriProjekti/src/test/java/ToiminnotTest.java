@@ -52,7 +52,7 @@ public class ToiminnotTest {
    }
     
    @Test
-   public void NollanLisäysEiMuutaTulosta() {
+   public void nollanLisäysEiMuutaTulosta() {
        
        this.toiminto.setTulos(3);
        this.toiminto.summa(0);
@@ -61,7 +61,7 @@ public class ToiminnotTest {
    }
    
    @Test
-    public void NegatiivinenLukuSummautuuOikein() {
+    public void negatiivinenLukuSummautuuOikein() {
        
        this.toiminto.setTulos(6);
        this.toiminto.summa(-3);
@@ -193,7 +193,7 @@ public class ToiminnotTest {
    }
    
    @Test
-    public void NegatiivinenLukujakaaOikein() {
+    public void negatiivinenLukujakaaOikein() {
        
        this.toiminto.setTulos(6);
        this.toiminto.osamaara(-3);
@@ -209,6 +209,21 @@ public class ToiminnotTest {
               
        assertEquals(3,this.toiminto.getTulos());
    }
+    
+    @Test
+    public void nollausToimii() {
+        this.toiminto.nollaa();
+        
+        assertEquals(0,toiminto.getTulos());
+    }
+    
+    @Test 
+    public void getTulosToimii() {
+        
+        assertEquals(0,toiminto.getTulos());
+        
+    }
+    
    
     
 }
