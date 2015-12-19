@@ -140,7 +140,7 @@ public class ToiminnotTest {
    }
     
    @Test
-   public void NollallaKertominenToimii() {
+   public void nollallaKertominenToimii() {
        
        this.toiminto.setTulos(3);
        this.toiminto.tulo(0);
@@ -202,7 +202,7 @@ public class ToiminnotTest {
    }
     
     @Test
-    public void JakoToimiiNegatiivisillaLuvuilla() {
+    public void jakoToimiiNegatiivisillaLuvuilla() {
         
        this.toiminto.setTulos(-9);
        this.toiminto.osamaara(-3);
