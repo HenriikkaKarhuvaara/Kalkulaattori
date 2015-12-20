@@ -19,7 +19,7 @@ Laskimessa on kaksi tekstikenttää. Toiseen käyttäjä syöttää lukuja, ja t
 * Käyttäjä painaa +-nappia
   * Tuloskentässä: 6 + 
 
-Siis tavoitteena on, että tässä laskimessa käyttäjä näkee syöttämänsä lausekkeen, eli voi tarkistaa, onko syöttänyt tiedot oikein. Tämä eroaa esim. Macin laskimesta, jossa lukuja on näkyvissä kerrallaan vain yksi, ja aiemmin syötettyjä lukuja ei pääse katsomaan. (Lisäksi lauseketta on mahdollista kumittaa, jos tämän tekeminen onnistuu. Tämäkin eroaa monesta laskimesta, jossa koko lauseke täytyy kirjoittaa uudelleen virheen sattuessa).
+Siis tavoitteena on, että tässä laskimessa käyttäjä näkee syöttämänsä lausekkeen, eli voi tarkistaa, onko syöttänyt tiedot oikein. Tämä eroaa esim. Macin laskimesta, jossa lukuja on näkyvissä kerrallaan vain yksi, ja aiemmin syötettyjä lukuja ei pääse katsomaan. (Lisäksi lauseketta on mahdollista kumittaa, jos tämän tekeminen onnistuu. Tämäkin eroaa monesta laskimesta, jossa koko lauseke täytyy kirjoittaa uudelleen virheen sattuessa). Keskitytään siis toimivuuteen ja käyttömukavuuteen, ja se kulkee laajuuden edellä.
 
 En vielä tarkkaan tiedä, kuinka paljon laskutoimituksia laskimella on mahdollista laskea, ja mitä  erikoismerkkejä ( cos, murtoluvut, juuret, potenssit jne ) on valittavissa. Ja miten nämä ovat kirjoitettavissa näppäimistön avulla. (Määritelläänkö omat pikanäppäimet, vai käytetäänkö esim. latexista tuttuja \sqrt jne).
 
