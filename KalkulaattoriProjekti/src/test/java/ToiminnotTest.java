@@ -43,7 +43,7 @@ public class ToiminnotTest {
    }
    
    @Test
-    public void toimiikoSummausNormaalissatapauksessa() {
+    public void toimiikoSummausNormaalitapauksessa() {
        
        this.toiminto.setTulos(3);
        this.toiminto.summa(3);
@@ -52,7 +52,7 @@ public class ToiminnotTest {
    }
     
    @Test
-   public void nollanLisäysEiMuutaTulosta() {
+   public void nollanLisaysEiMuutaTulosta() {
        
        this.toiminto.setTulos(3);
        this.toiminto.summa(0);
@@ -212,18 +212,9 @@ public class ToiminnotTest {
     
     @Test
     public void nollausToimii() {
+        this.toiminto.setTulos(2);
         this.toiminto.nollaa();
         
         assertEquals(0,toiminto.getTulos());
-    }
-    
-    @Test 
-    public void getTulosToimii() {
-        
-        assertEquals(0,toiminto.getTulos());
-        
-    }
-    
-   
-    
+    } 
 }
