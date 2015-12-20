@@ -2,7 +2,7 @@ package Kalkulaattori;
 
 public class Toiminnot {
 
-    private double tulos;
+    private int tulos;
     private boolean onnistuikoJako;
 
     public Toiminnot() {
@@ -10,15 +10,15 @@ public class Toiminnot {
         this.onnistuikoJako = true;
     }
 
-    public void summa(double luku) {
+    public void summa(int luku) {
         this.tulos += luku;
     }
 
-    public void erotus(double luku) {
+    public void erotus(int luku) {
         this.tulos -= luku;
     }
 
-    public void osamaara(double luku) {
+    public void osamaara(int luku) {
 
         if (luku != 0) {
             this.tulos /= luku;
@@ -27,7 +27,7 @@ public class Toiminnot {
         }
     }
 
-    public void tulo(double luku) {
+    public void tulo(int luku) {
         this.tulos *= luku;
     }
 
@@ -37,11 +37,11 @@ public class Toiminnot {
         this.tulos = 0;
     }
 
-    public double getTulos() {
+    public int getTulos() {
         return this.tulos;
     }
 
-    public void setTulos(double luku) {
+    public void setTulos(int luku) {
         this.tulos = luku;
     }
     
