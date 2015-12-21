@@ -1,6 +1,10 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package fi.henriikka.kalkulaattori;
 
-
-import Kalkulaattori.Toiminnot;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -8,14 +12,15 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
-
+/**
+ *
+ * @author henriikkakarhuvaara
+ */
 public class ToiminnotTest {
-    Toiminnot toiminto;
-   
+    private Toiminnot toiminto;
     
     public ToiminnotTest() {
-        this.toiminto = new Toiminnot();
-        //Luodaan aina testien alussa, joten alkuarvona tulos on nolla.
+        toiminto = new Toiminnot();
     }
     
     @BeforeClass
@@ -34,7 +39,8 @@ public class ToiminnotTest {
     public void tearDown() {
     }
 
-   @Test
+    
+    @Test
    public void toimiikoSummausNollaan() {
        
        this.toiminto.summa(3);
@@ -217,4 +223,7 @@ public class ToiminnotTest {
         
         assertEquals(0,toiminto.getTulos());
     } 
+    /**
+     * Test of summa method, of class Toiminnot.
+     */
 }
