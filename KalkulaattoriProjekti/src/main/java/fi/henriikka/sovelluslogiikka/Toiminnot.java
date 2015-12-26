@@ -1,4 +1,4 @@
-package fi.henriikka.kalkulaattori;
+package fi.henriikka.sovelluslogiikka;
 
 public class Toiminnot {
 
