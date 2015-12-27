@@ -9,11 +9,9 @@ Laskimessa on kaksi tekstikenttää. Toiseen käyttäjä syöttää lukuja, ja t
 **Esimerkkitapaus:**
 
 * Käyttäjä syöttää syötekenttään luvun 3
-  * Tuloskentässä: 3 
 * Käyttäjä painaa +-nappia
   * Syotekentässä: 3 +
 * Käyttäjä syöttää luvun 3
-  * Tuloskentässä: 3 + 3
 * Käyttäjä painaa =-nappia
   * Tuloskentässä: 3 + 3 = 6
 * Käyttäjä painaa +-nappia
