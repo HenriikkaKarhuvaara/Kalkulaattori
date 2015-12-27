@@ -31,8 +31,6 @@ public class Toiminnot {
         this.tulos *= luku;
     }
 
-//    public void kumita() {
-//    }
     public void nollaa() {
         this.tulos = 0;
     }
