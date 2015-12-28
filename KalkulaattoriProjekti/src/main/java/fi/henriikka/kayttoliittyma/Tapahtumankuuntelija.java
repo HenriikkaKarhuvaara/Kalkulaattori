@@ -42,6 +42,7 @@ public class Tapahtumankuuntelija implements ActionListener {
         try {
             arvo = parseDouble(syotekentta.getText());
         } catch (Exception e) {
+           syotekentta.setText("Syötä numero!");
         }
  
         if (ae.getSource() == summa) {

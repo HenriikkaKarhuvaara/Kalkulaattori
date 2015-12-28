@@ -10,7 +10,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.WindowConstants;
 
-public class Kayttoliittyma implements Runnable {
+public class ItseKalkulaattori implements Runnable {
     
     private JFrame frame;
     private double tulos;
@@ -26,6 +26,7 @@ public class Kayttoliittyma implements Runnable {
  
         frame.pack();
         frame.setVisible(true);
+        
     }
    
     //Pitäisikö tätä metodia jakaa osiin, vai onko ok käyttöliittymässä?
@@ -35,7 +36,7 @@ public class Kayttoliittyma implements Runnable {
         //Ensimmäinen luku kertoo laskimen rivien määrän, toinen luku kertoo sarakkeiden määrän.
         
         JTextField syotekentta = new JTextField();
-        JTextField tuloskentta = new JTextField(0);
+        JTextField tuloskentta = new JTextField("0.0");
         tuloskentta.setEnabled(false);
         //Käyttäjä ei pääse käsiksi tuloskentän sisältöön.
        
