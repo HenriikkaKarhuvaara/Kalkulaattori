@@ -2,4 +2,4 @@
 
 21.12.2015 / 3h / Deadlinen tehtäviin yhteensä + muutenkin ohjelman suunnittelua.
 
-28.12.2015 / 2h / Graafisen käyttöliittymän luonti alustavasti.
+28.12.2015 / 4h / Graafisen käyttöliittymän luonti alustavasti, uusi luokkakaavio, uusia testejä, pit- ja coberturaraportit.
