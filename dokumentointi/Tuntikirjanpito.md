@@ -1,5 +1,5 @@
 15.12.2015 / 4h / Järjestelmien asennus ja opettelu. Aiheen mietintä. Oli hieman ongelmia, joten vei aikaa.
 
-21.12.2015 / 3h / Deadlinen tehtäviin yhteensä + muutenkin ohjelman suunnittelua.
+21.12.2015 / 3h / Deadlinen tehtäviin yhteensä + muutenkin ohjelman suunnittelua. Sovelluslogiikan luontia, ja sen testejä.
 
 28.12.2015 / 4h / Graafisen käyttöliittymän luonti alustavasti, uusi luokkakaavio, uusia testejä, pit- ja coberturaraportit.
