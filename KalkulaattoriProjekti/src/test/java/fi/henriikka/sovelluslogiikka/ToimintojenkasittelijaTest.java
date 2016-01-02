@@ -24,7 +24,7 @@ public class ToimintojenkasittelijaTest {
     @Test
     public void toimiikoLaske() {
 
-        double tulos = toimintojenKasittelija.laske("summa", 2, 3);
+        double tulos = toimintojenKasittelija.suoritaToiminto("summa", 2, 3);
 
         assertEquals(5.0, tulos, 0.0001);
     }

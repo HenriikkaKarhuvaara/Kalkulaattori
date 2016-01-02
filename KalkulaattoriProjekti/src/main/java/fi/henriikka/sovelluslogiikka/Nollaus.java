@@ -1,19 +1,23 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * Luokka tarjoaa metodin nollaustoiminnolle.
  */
 package fi.henriikka.sovelluslogiikka;
 
 public class Nollaus extends Toiminto {
 
+    /**
+     * Metodi asettaa yläluokan Toiminto tuloksen arvoksi nolla, riippumatta
+     * käyttäjän syöttämistä arvoista.
+     *
+     * @param x Käyttäjän antama syöte
+     * @param y Käyttäjän antama syöte
+     *
+     * @return yläluokan Toiminto parametrin tulos arvo eli nolla.
+     */
     @Override
     public double suoritaToiminto(double x, double y) {
         super.tulos = 0;
         return super.tulos;
     }
-    
-    
-   
-    
+
 }
