@@ -24,59 +24,43 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 
-public class ItseKalkulaattoriTest extends AssertJSwingJUnitTestCase{
+public class KayttoliittymaTest extends AssertJSwingJUnitTestCase{
     FrameFixture window;
     Frame frame;
     
    
-    @Test
-    public void tulosAlussaNolla() {
-        window.textBox("tulos").requireText("0.0");
-    }
+    
     
     @Test
     public void summaNappulaToimii() {
         window.textBox("syote").setText("3");
+        window.textBox("tsyote").setText("3");
         window.button("+").click();
-        window.textBox("tulos").requireText("3.0");
-        window.button("+").click();
-        window.button("+").click();
-        window.textBox("tulos").requireText("9.0");
+        window.textBox("tulos").requireText("6.0");
     }
     
     @Test
     public void erotusNappulaToimii() {
         window.textBox("syote").setText("3");
+        window.textBox("tsyote").setText("2");
         window.button("-").click();
-        window.textBox("tulos").requireText("-3.0");
-        window.button("-").click();
-        window.button("-").click();
-        window.textBox("tulos").requireText("-9.0");
+        window.textBox("tulos").requireText("1.0");
     }
     
     @Test
     public void tuloNappulaToimii() {
         window.textBox("syote").setText("3");
+        window.textBox("tsyote").setText("3");
         window.button("*").click();
-        window.textBox("tulos").requireText("0.0");
-        window.textBox("syote").setText("3");
-        window.button("+").click();
-        window.textBox("syote").setText("3");
-        window.button("*").click();
-        window.button("*").click();
-        window.textBox("tulos").requireText("27.0");
+        window.textBox("tulos").requireText("9.0");
     }
     
     @Test 
     public void osamaaraNappulaToimii() {
         window.textBox("syote").setText("40");
-        window.button("+").click();
-        window.textBox("syote").setText("2");
+        window.textBox("tsyote").setText("2");
         window.button("/").click();
         window.textBox("tulos").requireText("20.0");
-        window.button("/").click();
-        window.button("/").click();
-        window.textBox("tulos").requireText("5.0");
     }
   
     @Test
@@ -90,8 +74,11 @@ public class ItseKalkulaattoriTest extends AssertJSwingJUnitTestCase{
     @Test
     public void nollaaNappulaToimii() {
         window.textBox("syote").setText("3");
+        window.textBox("tsyote").setText("3");
         window.button("+").click();
-        window.button("0").click();
+        window.button("C").click();
+        window.textBox("syote").requireText("");
+        window.textBox("tsyote").requireText("");
         window.textBox("tulos").requireText("0.0");
     }
     

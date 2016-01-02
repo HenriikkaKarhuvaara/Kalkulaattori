@@ -1,13 +1,13 @@
 package fi.henriikka.kalkulaattori;
 
-import fi.henriikka.kayttoliittyma.ItseKalkulaattori;
-import fi.henriikka.sovelluslogiikka.Toiminnot;
+import fi.henriikka.kayttoliittyma.Kayttoliittyma;
+
 import javax.swing.SwingUtilities;
 
 public class Main {
     public static void main(String[] args) {
         
-      SwingUtilities.invokeLater(new ItseKalkulaattori());
+      SwingUtilities.invokeLater(new Kayttoliittyma());
         
     }
     
