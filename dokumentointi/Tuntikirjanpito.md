@@ -3,3 +3,5 @@
 21.12.2015 / 3h / Deadlinen tehtäviin yhteensä + muutenkin ohjelman suunnittelua. Sovelluslogiikan luontia, ja sen testejä.
 
 28.12.2015 / 4h / Graafisen käyttöliittymän luonti alustavasti, uusi luokkakaavio, uusia testejä, pit- ja coberturaraportit.
+
+2.1.2016 / 6h / Muutettiin ohjelman rakennetta, luotiin uudet luokat ja uudet testit. Muokattiin käyttöliittymää. Tehtiin uusi luokkakaavio. Lisätään vielä lisää toimintoja.
