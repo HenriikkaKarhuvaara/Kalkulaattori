@@ -80,7 +80,8 @@ public class Kayttoliittyma implements Runnable {
 
        Tapahtumankuuntelija kasittelija = new Tapahtumankuuntelija(//nolla, yksi, kaksi, kolme, nelja, viisi, kuusi,
                                                                    //seitseman, kahdeksan, yhdeksan,
-                                                                     summa, erotus, tulo, osamaara, nollaa, tuloskentta, syotekentta, toinenSyotekentta);
+                                                                     summa, erotus, tulo, osamaara, nollaa, 
+                                                                    tuloskentta, syotekentta, toinenSyotekentta);
 
 //        nolla.addActionListener(kasittelija);
 //        yksi.addActionListener(kasittelija);

@@ -16,4 +16,8 @@ public abstract class Toiminto {
         return tulos;
     }
     
+    public void setTulos(double x) {
+        tulos = x;
+    }
+    
 }
