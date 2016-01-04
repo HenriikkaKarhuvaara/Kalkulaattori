@@ -3,6 +3,7 @@
  */
 package fi.henriikka.kayttoliittyma;
 
+import fi.henriikka.sovelluslogiikka.Muisti;
 import fi.henriikka.sovelluslogiikka.Toimintojenkasittelija;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -17,6 +18,8 @@ public class Tapahtumankuuntelija implements ActionListener {
     private JButton tulo;
     private JButton osamaara;
     private JButton nollaa;
+    private JButton viimeisinVastaus;
+    private JButton pvm;
     private JTextField tuloskentta;
     private JTextField syotekentta;
     private JTextField toinenSyotekentta;
@@ -24,16 +27,20 @@ public class Tapahtumankuuntelija implements ActionListener {
 
     public Tapahtumankuuntelija(
             JButton summa, JButton erotus, JButton tulo, JButton osamaara,
-            JButton nollaa, JTextField tuloskentta, JTextField syotekentta, JTextField toinenSyotekentta) {
+            JButton nollaa, JButton viimeisinVastaus, JButton pvm,
+            JTextField tuloskentta, JTextField syotekentta, JTextField toinenSyotekentta) {
 
         this.summa = summa;
         this.erotus = erotus;
         this.tulo = tulo;
         this.osamaara = osamaara;
         this.nollaa = nollaa;
+        this.viimeisinVastaus = viimeisinVastaus;
+        this.pvm = pvm;
         this.tuloskentta = tuloskentta;
         this.syotekentta = syotekentta;
         this.toinenSyotekentta = toinenSyotekentta;
+
         this.toimintojenkasittelija = new Toimintojenkasittelija();
     }
 
@@ -45,35 +52,70 @@ public class Tapahtumankuuntelija implements ActionListener {
      */
     @Override
     public void actionPerformed(ActionEvent ae) {
+        double ans = 0;
         double arvo1 = 0;
         double arvo2 = 0;
         double laskunTulos = 0;
+        String ekapvm = "";
+        String tokapvm = "";
+        String tulos = "";
 
-        try {
-            arvo1 = parseDouble(syotekentta.getText());
-            arvo2 = parseDouble(toinenSyotekentta.getText());
+        if (ae.getSource() == pvm) {
 
-        } catch (Exception e) {
-            syotekentta.setText("Syötä numero!");
-        }
+            ekapvm = "" + syotekentta.getText();
+            tokapvm = "" + toinenSyotekentta.getText();
 
-        if (ae.getSource() == summa) {
+            tulos = toimintojenkasittelija.suoritaPaivamaaralaskenta(ekapvm, tokapvm);
 
-            laskunTulos = toimintojenkasittelija.suoritaToiminto("summa", arvo1, arvo2);
+            tuloskentta.setText(tulos);
 
-        } else if (ae.getSource() == erotus) {
-            laskunTulos = toimintojenkasittelija.suoritaToiminto("erotus", arvo1, arvo2);
-        } else if (ae.getSource() == tulo) {
-            laskunTulos = toimintojenkasittelija.suoritaToiminto("tulo", arvo1, arvo2);
-        } else if (ae.getSource() == osamaara) {
-            laskunTulos = toimintojenkasittelija.suoritaToiminto("osamaara", arvo1, arvo2);
-        } else {
-            laskunTulos = toimintojenkasittelija.suoritaToiminto("nollaus", arvo1, arvo2);
-            syotekentta.setText("");
+        } else if (ae.getSource() == viimeisinVastaus) {
+
+            ans = toimintojenkasittelija.annaViimeisinVastaus();
+               // nolla, jos mitään ei laskettu
+            
+            syotekentta.setText("" + ans);
             toinenSyotekentta.setText("");
+            tuloskentta.setText("");
+
+        } else {
+
+            try {
+                arvo1 = parseDouble(syotekentta.getText());
+                arvo2 = parseDouble(toinenSyotekentta.getText());
+
+            } catch (Exception e) {
+                syotekentta.setText("Syötä numero molempiin kenttiin!");
+            }
+
+            if (ae.getSource() == summa) {
+
+                laskunTulos = toimintojenkasittelija.suoritaToiminto("summa", arvo1, arvo2);
+
+            } else if (ae.getSource() == erotus) {
+
+                laskunTulos = toimintojenkasittelija.suoritaToiminto("erotus", arvo1, arvo2);
+
+            } else if (ae.getSource() == tulo) {
+
+                laskunTulos = toimintojenkasittelija.suoritaToiminto("tulo", arvo1, arvo2);
+
+            } else if (ae.getSource() == osamaara) {
+
+                laskunTulos = toimintojenkasittelija.suoritaToiminto("osamaara", arvo1, arvo2);
+
+            } else {
+
+                laskunTulos = toimintojenkasittelija.suoritaToiminto("nollaus", arvo1, arvo2);
+                syotekentta.setText("");
+                toinenSyotekentta.setText("");
+
+            }
+            tuloskentta.setText("" + laskunTulos);
+            toimintojenkasittelija.lisaaMuistiin(laskunTulos);
+
         }
 
-        tuloskentta.setText("" + laskunTulos);
     }
 
 }

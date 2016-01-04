@@ -15,7 +15,7 @@ import javax.swing.WindowConstants;
 public class Kayttoliittyma implements Runnable {
 
     private JFrame frame;
-    private double tulos;
+   
 
     /*
      * Metodi luo kehyksen laskimelle, asettaa sille koon ja sulkuoperaation, sekä luo komponentit ja asettaa ne näkyviksi.
@@ -33,7 +33,8 @@ public class Kayttoliittyma implements Runnable {
         frame.setVisible(true);
 
     }
-
+    
+   
     /**
      * Metodi luo laskimen tekstikentät ja nappulat.
      *
@@ -59,6 +60,8 @@ public class Kayttoliittyma implements Runnable {
         JButton tulo = new JButton("*");
         JButton osamaara = new JButton("/");
         JButton nollaa = new JButton("C");
+        JButton viimeisinVastaus = new JButton("A");
+        JButton pvm = new JButton("D");
 
         tuloskentta.setName("tulos");
         syotekentta.setName("syote");
@@ -68,9 +71,11 @@ public class Kayttoliittyma implements Runnable {
         tulo.setName("*");
         osamaara.setName("/");
         nollaa.setName("C");
+        viimeisinVastaus.setName("A");
+        pvm.setName("D");
 
         Tapahtumankuuntelija kasittelija = new Tapahtumankuuntelija(
-                summa, erotus, tulo, osamaara, nollaa,
+                summa, erotus, tulo, osamaara, nollaa, viimeisinVastaus, pvm,
                 tuloskentta, syotekentta, toinenSyotekentta);
 
         summa.addActionListener(kasittelija);
@@ -78,6 +83,8 @@ public class Kayttoliittyma implements Runnable {
         tulo.addActionListener(kasittelija);
         osamaara.addActionListener(kasittelija);
         nollaa.addActionListener(kasittelija);
+        viimeisinVastaus.addActionListener(kasittelija);
+        pvm.addActionListener(kasittelija);
 
         JPanel nappulapaneeli = new JPanel(new GridLayout(1, 5));
         nappulapaneeli.add(summa);
@@ -85,6 +92,8 @@ public class Kayttoliittyma implements Runnable {
         nappulapaneeli.add(tulo);
         nappulapaneeli.add(osamaara);
         nappulapaneeli.add(nollaa);
+        nappulapaneeli.add(viimeisinVastaus);
+        nappulapaneeli.add(pvm);
 
         container.add(nappulapaneeli);
     }

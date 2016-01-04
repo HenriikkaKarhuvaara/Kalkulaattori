@@ -83,6 +83,26 @@ public class KayttoliittymaTest extends AssertJSwingJUnitTestCase{
     }
     
     @Test
+    public void ansNappulaToimii() {
+        window.textBox("syote").setText("3");
+        window.textBox("tsyote").setText("3");
+        window.button("+").click();
+        window.button("A").click();
+        window.textBox("syote").requireText("6.0");
+        window.textBox("tsyote").requireText("");
+        window.textBox("tulos").requireText("");
+    }
+    
+    @Test
+    public void pvmNappulaToimii() {
+        window.textBox("syote").setText("3 8 1995");
+        window.textBox("tsyote").setText("4 8 1995");
+        window.button("D").click();
+        window.textBox("tulos").requireText("Päiviä: 1");
+
+    }
+    
+    @Test
     public void oikeanKokoinenFrame() {
         Dimension laskimenKoko = new Dimension(400,250);
         window.requireSize(laskimenKoko);
@@ -103,7 +123,7 @@ public class KayttoliittymaTest extends AssertJSwingJUnitTestCase{
     public void laskinToimiiOikeinKunKayttajaSyottaaMuunKuinNumeron() {
         window.textBox("syote").setText("Moi");
         window.button("+").click();
-        window.textBox("syote").requireText("Syötä numero!");
+        window.textBox("syote").requireText("Syötä numero molempiin kenttiin!");
     }
      
     

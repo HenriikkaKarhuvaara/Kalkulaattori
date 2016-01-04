@@ -16,19 +16,34 @@ import static org.junit.Assert.*;
 public class ToimintojenkasittelijaTest {
 
     private Toimintojenkasittelija toimintojenKasittelija;
-
+    private Muisti muisti;
+    
     public ToimintojenkasittelijaTest() {
         toimintojenKasittelija = new Toimintojenkasittelija();
+        muisti = new Muisti();
     }
 
     @Test
-    public void toimiikoLaske() {
+    public void toimiikoSuoritaToiminto() {
 
         double tulos = toimintojenKasittelija.suoritaToiminto("summa", 2, 3);
 
         assertEquals(5.0, tulos, 0.0001);
     }
 
+    
+    @Test
+    public void toimiikoSuoritaPaivamaaraLaskenta() {
+       
+        String tulos = toimintojenKasittelija.suoritaPaivamaaralaskenta("26 08 1995", "28 08 1995");
+        
+        assertEquals("Päiviä: 2", tulos);
+    }
+    
+    
+    
+    
+   
     @Test
     public void hashMapinKokoOikea() {
         assertEquals(5, toimintojenKasittelija.getHashMap().size());

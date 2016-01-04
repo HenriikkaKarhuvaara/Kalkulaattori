@@ -9,35 +9,51 @@ import java.util.HashMap;
 public class Toimintojenkasittelija {
 
     private HashMap<String, Toiminto> toimintojenKasittelija;
-    
+    private Muisti muisti;
+    private PaivamaaraLaskuri pvm;
+
     public Toimintojenkasittelija() {
         luoHashMap();
-    }
- /**
- * Metodi etsii oikean toiminnon hashMapista, ja toteutta toiminnon suorituksen käyttäjän antamilla arvoilla.
- * 
- * @param toiminnonNimi käyttäjän antama syöte
- * @param   x   Käyttäjän antama syöte
- * @param   y   Käyttäjän antama syöte
- * 
- * @return Oikean toiminnon laskutoimituksen tms. tulos.
- */
-    public double suoritaToiminto(String toiminnonNimi, double x, double y) {
-
-        return toimintojenKasittelija.get(toiminnonNimi).suoritaToiminto(x,y);
-
+        muisti = new Muisti();
+        pvm = new PaivamaaraLaskuri();
     }
 
     /**
- * Metodi luo hashMapin, johon lisätään laskimen toiminnot.
- *
- */
+     * Metodi etsii oikean toiminnon hashMapista, ja toteutta toiminnon
+     * suorituksen käyttäjän antamilla arvoilla.
+     *
+     * @param toiminnonNimi käyttäjän antama syöte
+     * @param x Käyttäjän antama syöte
+     * @param y Käyttäjän antama syöte
+     *
+     * @return Oikean toiminnon laskutoimituksen tms. tulos.
+     */
+    public double suoritaToiminto(String toiminnonNimi, double x, double y) {
+        return toimintojenKasittelija.get(toiminnonNimi).suoritaToiminto(x, y);
+    }
     
+    public String suoritaPaivamaaralaskenta(String x, String y) {
+        return pvm.laskePaivamaarienEro(x, y);
+    }
+
+    public void lisaaMuistiin(double x) {
+        muisti.setVastaus(x);
+    }
+    
+
+    public double annaViimeisinVastaus() {
+        return muisti.getVastaus();
+    }
+
+   
+    /**
+     * Metodi luo hashMapin, johon lisätään laskimen toiminnot.
+     *
+     */
     private void luoHashMap() {
 
         toimintojenKasittelija = new HashMap<>();
 
-        
         Summa s = new Summa();
         Erotus e = new Erotus();
         Tulo t = new Tulo();
@@ -50,15 +66,13 @@ public class Toimintojenkasittelija {
         toimintojenKasittelija.put("osamaara", o);
         toimintojenKasittelija.put("nollaus", n);
     }
-    
-     /**
- * Metodi palauttaa luodun hashMapin.
- * 
- * @return luotu hashMap
- */
-    
-   public HashMap getHashMap() {
-       return toimintojenKasittelija;
-   }
-}
 
+    /**
+     * Metodi palauttaa luodun hashMapin.
+     *
+     * @return luotu hashMap
+     */
+    public HashMap getHashMap() {
+        return toimintojenKasittelija;
+    }
+}
