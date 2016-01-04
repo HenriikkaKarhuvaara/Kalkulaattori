@@ -5,3 +5,5 @@
 28.12.2015 / 4h / Graafisen käyttöliittymän luonti alustavasti, uusi luokkakaavio, uusia testejä, pit- ja coberturaraportit.
 
 2.1.2016 / 6h / Muutettiin ohjelman rakennetta, luotiin uudet luokat ja uudet testit. Muokattiin käyttöliittymää. Tehtiin uusi luokkakaavio. Lisätään vielä lisää toimintoja.
+
+4.1.2016 / 3h / Lisättiin muisti ja päivämäärälaskuri. Lisättiin testejä.
