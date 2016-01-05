@@ -99,8 +99,36 @@ public class KayttoliittymaTest extends AssertJSwingJUnitTestCase{
         window.textBox("tsyote").setText("4 8 1995");
         window.button("D").click();
         window.textBox("tulos").requireText("Päiviä: 1");
-
     }
+    
+    @Test
+    public void tuumatSenteiksiNappulaToimii() {
+        window.textBox("syote").setText("1");
+        window.button("IC").click();
+        window.textBox("tulos").requireText("Sentteinä: 2.54");
+    }
+    
+    @Test
+    public void sentitTuumiksiNappulaToimii() {
+        window.textBox("syote").setText("2.54");
+        window.button("CI").click();
+        window.textBox("tulos").requireText("Tuumina: 1.0");
+    }
+    
+    @Test
+    public void kilotPaunoiksiNappulaToimii() {
+        window.textBox("syote").setText("1");
+        window.button("KP").click();
+        window.textBox("tulos").requireText("Paunoina: 2.2046");
+    }
+    
+    @Test
+    public void paunatKiloiksiNappulaToimii() {
+        window.textBox("syote").setText("2.2046");
+        window.button("PK").click();
+        window.textBox("tulos").requireText("Kiloina: 1.0");
+    }
+    
     
     @Test
     public void oikeanKokoinenFrame() {
@@ -124,6 +152,13 @@ public class KayttoliittymaTest extends AssertJSwingJUnitTestCase{
         window.textBox("syote").setText("Moi");
         window.button("+").click();
         window.textBox("syote").requireText("Syötä numero molempiin kenttiin!");
+    }
+    
+    @Test
+    public void laskinToimiiOikeinKunKayttajaSyottaaMuunKuinNumeronLisaToiminnoissa() {
+        window.textBox("syote").setText("Moi");
+        window.button("KP").click();
+        window.textBox("syote").requireText("Syötä numero!");
     }
      
     

@@ -63,9 +63,10 @@ public class Kayttoliittyma implements Runnable {
         JButton pvm = new JButton("D");
         JButton tuumatSenteiksi = new JButton("IC");
         JButton sentitTuumiksi = new JButton("CI");
-        JButton paunatKiloiksi = new JButton("PK");
+        
         JButton kilotPaunoiksi = new JButton("KP");
-
+        JButton paunatKiloiksi = new JButton("PK");
+        
         tuloskentta.setName("tulos");
         syotekentta.setName("syote");
         toinenSyotekentta.setName("tsyote");
@@ -78,12 +79,13 @@ public class Kayttoliittyma implements Runnable {
         pvm.setName("D");
         tuumatSenteiksi.setName("IC");
         sentitTuumiksi.setName("CI");
-        paunatKiloiksi.setName("PK");
+        
         kilotPaunoiksi.setName("KP");
+        paunatKiloiksi.setName("PK");
 
         Tapahtumankuuntelija kasittelija = new Tapahtumankuuntelija(
                 summa, erotus, tulo, osamaara, nollaa, viimeisinVastaus,
-                pvm, tuumatSenteiksi, sentitTuumiksi, paunatKiloiksi, kilotPaunoiksi,
+                pvm, tuumatSenteiksi, sentitTuumiksi, kilotPaunoiksi, paunatKiloiksi,
                 tuloskentta, syotekentta, toinenSyotekentta);
 
         summa.addActionListener(kasittelija);
@@ -95,8 +97,9 @@ public class Kayttoliittyma implements Runnable {
         pvm.addActionListener(kasittelija);
         tuumatSenteiksi.addActionListener(kasittelija);
         sentitTuumiksi.addActionListener(kasittelija);
-        paunatKiloiksi.addActionListener(kasittelija);
         kilotPaunoiksi.addActionListener(kasittelija);
+        paunatKiloiksi.addActionListener(kasittelija);
+
 
         JPanel nappulapaneeli = new JPanel(new GridLayout(1, 6));
         nappulapaneeli.add(summa);

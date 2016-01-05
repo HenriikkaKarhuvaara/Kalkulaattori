@@ -8,7 +8,7 @@ import java.util.HashMap;
 
 public class Toimintojenkasittelija {
 
-    private HashMap<String, PerusToiminto> toimintojenKasittelija;
+    private HashMap<String, PerusToiminto> perustoimintojenKasittelija;
     private Muisti muisti;
     private PaivamaaraLaskuri pvm;
     private SentitJaTuumat sjt;
@@ -33,7 +33,7 @@ public class Toimintojenkasittelija {
      * @return Oikean toiminnon laskutoimituksen tms. tulos.
      */
     public double suoritaPerustoiminto(String toiminnonNimi, double x, double y) {
-        return toimintojenKasittelija.get(toiminnonNimi).suoritaToiminto(x, y);
+        return perustoimintojenKasittelija.get(toiminnonNimi).suoritaToiminto(x, y);
     }
     
     public String suoritaPaivamaaralaskenta(String x, String y) {
@@ -71,7 +71,7 @@ public class Toimintojenkasittelija {
      */
     private void luoHashMap() {
 
-        toimintojenKasittelija = new HashMap<>();
+        perustoimintojenKasittelija = new HashMap<>();
 
         Summa s = new Summa();
         Erotus e = new Erotus();
@@ -79,11 +79,11 @@ public class Toimintojenkasittelija {
         Osamaara o = new Osamaara();
         Nollaus n = new Nollaus();
 
-        toimintojenKasittelija.put("summa", s);
-        toimintojenKasittelija.put("erotus", e);
-        toimintojenKasittelija.put("tulo", t);
-        toimintojenKasittelija.put("osamaara", o);
-        toimintojenKasittelija.put("nollaus", n);
+        perustoimintojenKasittelija.put("summa", s);
+        perustoimintojenKasittelija.put("erotus", e);
+        perustoimintojenKasittelija.put("tulo", t);
+        perustoimintojenKasittelija.put("osamaara", o);
+        perustoimintojenKasittelija.put("nollaus", n);
     }
 
     /**
@@ -92,6 +92,6 @@ public class Toimintojenkasittelija {
      * @return luotu hashMap
      */
     public HashMap getHashMap() {
-        return toimintojenKasittelija;
+        return perustoimintojenKasittelija;
     }
 }

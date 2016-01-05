@@ -40,10 +40,38 @@ public class ToimintojenkasittelijaTest {
         assertEquals("Päiviä: 2", tulos);
     }
     
+    @Test
+    public void toimiikoSentitTuumiksi() {
+
+        double tulos = toimintojenKasittelija.sentitTuumiksi(2.54);
+
+        assertEquals(1.0, tulos, 0.0001);
+    }
     
+    @Test
+    public void toimiikoTuumatSenteiksi() {
+
+        double tulos = toimintojenKasittelija.tuumatSenteiksi(1);
+
+        assertEquals(2.54, tulos, 0.0001);
+    }
     
+    @Test
+    public void toimiikoPaunatKiloiksi() {
+
+        double tulos = toimintojenKasittelija.paunatKiloiksi(2.2046);
+
+        assertEquals(1.0, tulos, 0.0001);
+    }
     
-   
+    @Test
+    public void toimiikoKilotPaunoiksi() {
+
+        double tulos = toimintojenKasittelija.kilotPaunoiksi(1);
+
+        assertEquals(2.2046, tulos, 0.0001);
+    }
+    
     @Test
     public void hashMapinKokoOikea() {
         assertEquals(5, toimintojenKasittelija.getHashMap().size());
