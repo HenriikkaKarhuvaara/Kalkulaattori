@@ -20,6 +20,11 @@ public class Tapahtumankuuntelija implements ActionListener {
     private JButton nollaa;
     private JButton viimeisinVastaus;
     private JButton pvm;
+    private JButton sentitTuumiksi;
+    private JButton tuumatSenteiksi;
+    private JButton kilotPaunoiksi;
+    private JButton paunatKiloiksi;
+
     private JTextField tuloskentta;
     private JTextField syotekentta;
     private JTextField toinenSyotekentta;
@@ -27,7 +32,8 @@ public class Tapahtumankuuntelija implements ActionListener {
 
     public Tapahtumankuuntelija(
             JButton summa, JButton erotus, JButton tulo, JButton osamaara,
-            JButton nollaa, JButton viimeisinVastaus, JButton pvm,
+            JButton nollaa, JButton viimeisinVastaus, JButton pvm, JButton tuumatSenteiksi, JButton sentitTuumiksi, 
+            JButton kilotPaunoiksi, JButton paunatKiloiksi,
             JTextField tuloskentta, JTextField syotekentta, JTextField toinenSyotekentta) {
 
         this.summa = summa;
@@ -37,6 +43,11 @@ public class Tapahtumankuuntelija implements ActionListener {
         this.nollaa = nollaa;
         this.viimeisinVastaus = viimeisinVastaus;
         this.pvm = pvm;
+        this.tuumatSenteiksi = tuumatSenteiksi;
+        this.sentitTuumiksi = sentitTuumiksi;
+        this.kilotPaunoiksi = kilotPaunoiksi;
+        this.paunatKiloiksi = paunatKiloiksi;
+        
         this.tuloskentta = tuloskentta;
         this.syotekentta = syotekentta;
         this.toinenSyotekentta = toinenSyotekentta;
@@ -78,6 +89,50 @@ public class Tapahtumankuuntelija implements ActionListener {
             toinenSyotekentta.setText("");
             tuloskentta.setText("");
 
+        } else if (ae.getSource() == tuumatSenteiksi) {
+            
+            try {
+                arvo1 = parseDouble(syotekentta.getText());
+            } catch (Exception e) {
+                syotekentta.setText("Syötä numero!");
+            }
+             
+            double sentit = toimintojenkasittelija.tuumatSenteiksi(arvo1);
+            tuloskentta.setText("Sentteinä: " + sentit);
+            
+        } else if (ae.getSource() == sentitTuumiksi) {
+           
+            try {
+                arvo1 = parseDouble(syotekentta.getText());
+            } catch (Exception e) {
+                syotekentta.setText("Syötä numero!");
+            }
+             
+            double tuumat = toimintojenkasittelija.sentitTuumiksi(arvo1);
+            tuloskentta.setText("Tuumina: " + tuumat);
+            
+        } else if (ae.getSource() == kilotPaunoiksi) {
+            
+            try {
+                arvo1 = parseDouble(syotekentta.getText());
+            } catch (Exception e) {
+                syotekentta.setText("Syötä numero!");
+            }
+             
+            double paunat = toimintojenkasittelija.kilotPaunoiksi(arvo1);
+            tuloskentta.setText("Paunoina: " + paunat);
+        
+        } else if (ae.getSource() == paunatKiloiksi) {
+            
+            try {
+                arvo1 = parseDouble(syotekentta.getText());
+            } catch (Exception e) {
+                syotekentta.setText("Syötä numero!");
+            }
+             
+            double kilot = toimintojenkasittelija.paunatKiloiksi(arvo1);
+            tuloskentta.setText("Kiloina: " + kilot);
+            
         } else {
 
             try {
@@ -90,23 +145,23 @@ public class Tapahtumankuuntelija implements ActionListener {
 
             if (ae.getSource() == summa) {
 
-                laskunTulos = toimintojenkasittelija.suoritaToiminto("summa", arvo1, arvo2);
+                laskunTulos = toimintojenkasittelija.suoritaPerustoiminto("summa", arvo1, arvo2);
 
             } else if (ae.getSource() == erotus) {
 
-                laskunTulos = toimintojenkasittelija.suoritaToiminto("erotus", arvo1, arvo2);
+                laskunTulos = toimintojenkasittelija.suoritaPerustoiminto("erotus", arvo1, arvo2);
 
             } else if (ae.getSource() == tulo) {
 
-                laskunTulos = toimintojenkasittelija.suoritaToiminto("tulo", arvo1, arvo2);
+                laskunTulos = toimintojenkasittelija.suoritaPerustoiminto("tulo", arvo1, arvo2);
 
             } else if (ae.getSource() == osamaara) {
 
-                laskunTulos = toimintojenkasittelija.suoritaToiminto("osamaara", arvo1, arvo2);
+                laskunTulos = toimintojenkasittelija.suoritaPerustoiminto("osamaara", arvo1, arvo2);
 
             } else {
 
-                laskunTulos = toimintojenkasittelija.suoritaToiminto("nollaus", arvo1, arvo2);
+                laskunTulos = toimintojenkasittelija.suoritaPerustoiminto("nollaus", arvo1, arvo2);
                 syotekentta.setText("");
                 toinenSyotekentta.setText("");
 

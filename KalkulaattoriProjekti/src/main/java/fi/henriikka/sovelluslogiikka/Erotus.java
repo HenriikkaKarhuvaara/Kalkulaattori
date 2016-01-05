@@ -4,7 +4,7 @@
 
 package fi.henriikka.sovelluslogiikka;
 
-public class Erotus extends Toiminto {
+public class Erotus extends PerusToiminto {
 
     /**
      * Metodi laskee annettujen parametrien erotuksen, ja palauttaa sen arvon.

@@ -3,7 +3,7 @@
  */
 package fi.henriikka.sovelluslogiikka;
 
-public class Summa extends Toiminto {
+public class Summa extends PerusToiminto {
 
     /**
      * Metodi laskee annettujen parametrien summan, ja palauttaa sen arvon.

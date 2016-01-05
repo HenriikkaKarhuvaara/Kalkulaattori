@@ -15,7 +15,7 @@ import javax.swing.WindowConstants;
 public class Kayttoliittyma implements Runnable {
 
     private JFrame frame;
-   
+
 
     /*
      * Metodi luo kehyksen laskimelle, asettaa sille koon ja sulkuoperaation, sekä luo komponentit ja asettaa ne näkyviksi.
@@ -33,8 +33,7 @@ public class Kayttoliittyma implements Runnable {
         frame.setVisible(true);
 
     }
-    
-   
+
     /**
      * Metodi luo laskimen tekstikentät ja nappulat.
      *
@@ -42,7 +41,7 @@ public class Kayttoliittyma implements Runnable {
      */
     private void luoKomponentit(Container container) {
 
-        frame.setLayout(new GridLayout(4, 1));
+        frame.setLayout(new GridLayout(5, 1));
         //Ensimmäinen luku kertoo laskimen rivien määrän, toinen luku kertoo sarakkeiden määrän.
 
         JTextField syotekentta = new JTextField();
@@ -62,6 +61,10 @@ public class Kayttoliittyma implements Runnable {
         JButton nollaa = new JButton("C");
         JButton viimeisinVastaus = new JButton("A");
         JButton pvm = new JButton("D");
+        JButton tuumatSenteiksi = new JButton("IC");
+        JButton sentitTuumiksi = new JButton("CI");
+        JButton paunatKiloiksi = new JButton("PK");
+        JButton kilotPaunoiksi = new JButton("KP");
 
         tuloskentta.setName("tulos");
         syotekentta.setName("syote");
@@ -73,9 +76,14 @@ public class Kayttoliittyma implements Runnable {
         nollaa.setName("C");
         viimeisinVastaus.setName("A");
         pvm.setName("D");
+        tuumatSenteiksi.setName("IC");
+        sentitTuumiksi.setName("CI");
+        paunatKiloiksi.setName("PK");
+        kilotPaunoiksi.setName("KP");
 
         Tapahtumankuuntelija kasittelija = new Tapahtumankuuntelija(
-                summa, erotus, tulo, osamaara, nollaa, viimeisinVastaus, pvm,
+                summa, erotus, tulo, osamaara, nollaa, viimeisinVastaus,
+                pvm, tuumatSenteiksi, sentitTuumiksi, paunatKiloiksi, kilotPaunoiksi,
                 tuloskentta, syotekentta, toinenSyotekentta);
 
         summa.addActionListener(kasittelija);
@@ -85,17 +93,29 @@ public class Kayttoliittyma implements Runnable {
         nollaa.addActionListener(kasittelija);
         viimeisinVastaus.addActionListener(kasittelija);
         pvm.addActionListener(kasittelija);
+        tuumatSenteiksi.addActionListener(kasittelija);
+        sentitTuumiksi.addActionListener(kasittelija);
+        paunatKiloiksi.addActionListener(kasittelija);
+        kilotPaunoiksi.addActionListener(kasittelija);
 
-        JPanel nappulapaneeli = new JPanel(new GridLayout(1, 5));
+        JPanel nappulapaneeli = new JPanel(new GridLayout(1, 6));
         nappulapaneeli.add(summa);
         nappulapaneeli.add(erotus);
         nappulapaneeli.add(tulo);
         nappulapaneeli.add(osamaara);
         nappulapaneeli.add(nollaa);
         nappulapaneeli.add(viimeisinVastaus);
-        nappulapaneeli.add(pvm);
+
+        JPanel toinenNappulapaneeli = new JPanel(new GridLayout(1, 5));
+        toinenNappulapaneeli.add(viimeisinVastaus);
+        toinenNappulapaneeli.add(pvm);
+        toinenNappulapaneeli.add(tuumatSenteiksi);
+        toinenNappulapaneeli.add(sentitTuumiksi);
+        toinenNappulapaneeli.add(kilotPaunoiksi);
+        toinenNappulapaneeli.add(paunatKiloiksi);
 
         container.add(nappulapaneeli);
+        container.add(toinenNappulapaneeli);
     }
 
     /**

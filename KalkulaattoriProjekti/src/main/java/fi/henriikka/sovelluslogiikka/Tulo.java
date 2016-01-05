@@ -3,7 +3,7 @@
  */
 package fi.henriikka.sovelluslogiikka;
 
-public class Tulo extends Toiminto {
+public class Tulo extends PerusToiminto {
 
     /**
      * Metodi laskee annettujen parametrien tulon, ja palauttaa sen arvon.

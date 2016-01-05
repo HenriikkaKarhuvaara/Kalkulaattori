@@ -3,7 +3,7 @@
  */
 package fi.henriikka.sovelluslogiikka;
 
-public class Osamaara extends Toiminto {
+public class Osamaara extends PerusToiminto {
 
     private boolean onnistuikoJako;
 

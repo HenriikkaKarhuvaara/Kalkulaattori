@@ -26,7 +26,7 @@ public class ToimintojenkasittelijaTest {
     @Test
     public void toimiikoSuoritaToiminto() {
 
-        double tulos = toimintojenKasittelija.suoritaToiminto("summa", 2, 3);
+        double tulos = toimintojenKasittelija.suoritaPerustoiminto("summa", 2, 3);
 
         assertEquals(5.0, tulos, 0.0001);
     }

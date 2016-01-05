@@ -3,7 +3,7 @@
  */
 package fi.henriikka.sovelluslogiikka;
 
-public class Nollaus extends Toiminto {
+public class Nollaus extends PerusToiminto {
 
     /**
      * Metodi asettaa yläluokan Toiminto tuloksen arvoksi nolla, riippumatta

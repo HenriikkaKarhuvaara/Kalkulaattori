@@ -3,7 +3,7 @@
  */
 package fi.henriikka.sovelluslogiikka;
 
-public abstract class Toiminto {
+public abstract class PerusToiminto {
 
     public double tulos;
 

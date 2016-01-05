@@ -8,14 +8,18 @@ import java.util.HashMap;
 
 public class Toimintojenkasittelija {
 
-    private HashMap<String, Toiminto> toimintojenKasittelija;
+    private HashMap<String, PerusToiminto> toimintojenKasittelija;
     private Muisti muisti;
     private PaivamaaraLaskuri pvm;
+    private SentitJaTuumat sjt;
+    private PaunatJaKilot pjk;
 
     public Toimintojenkasittelija() {
         luoHashMap();
         muisti = new Muisti();
         pvm = new PaivamaaraLaskuri();
+        sjt = new SentitJaTuumat();
+        pjk = new PaunatJaKilot();
     }
 
     /**
@@ -28,7 +32,7 @@ public class Toimintojenkasittelija {
      *
      * @return Oikean toiminnon laskutoimituksen tms. tulos.
      */
-    public double suoritaToiminto(String toiminnonNimi, double x, double y) {
+    public double suoritaPerustoiminto(String toiminnonNimi, double x, double y) {
         return toimintojenKasittelija.get(toiminnonNimi).suoritaToiminto(x, y);
     }
     
@@ -40,9 +44,24 @@ public class Toimintojenkasittelija {
         muisti.setVastaus(x);
     }
     
-
     public double annaViimeisinVastaus() {
         return muisti.getVastaus();
+    }
+    
+    public double sentitTuumiksi(double cm) {
+        return sjt.sentitTuumiksi(cm);
+    }
+    
+    public double tuumatSenteiksi(double inch) {
+        return sjt.tuumatSenteiksi(inch);
+    }
+    
+     public double paunatKiloiksi(double pounds){
+        return pjk.paunatKiloiksi(pounds) ;
+    }
+    
+    public double kilotPaunoiksi(double kilot) {
+        return pjk.kilotPaunoiksi(kilot);
     }
 
    
