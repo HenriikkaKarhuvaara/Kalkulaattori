@@ -7,3 +7,7 @@
 2.1.2016 / 6h / Muutettiin ohjelman rakennetta, luotiin uudet luokat ja uudet testit. Muokattiin käyttöliittymää. Tehtiin uusi luokkakaavio. Lisätään vielä lisää toimintoja.
 
 4.1.2016 / 3h / Lisättiin muisti ja päivämäärälaskuri. Lisättiin testejä.
+
+5.1.2016 / 2h / Muunnosoperaatiot pituuksille ja painoille.
+
+6.1.2016 / 4h / Testejä, pit ja cobertura, javadoc, luokkakaavio, aihemäärittely, sekvenssikaaviot.
