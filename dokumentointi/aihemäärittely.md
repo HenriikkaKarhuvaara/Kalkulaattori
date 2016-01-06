@@ -1,34 +1,73 @@
 **Aihe:** Laskin
 
-Halutaan järjestelmä, jolla käyttäjä voi laskea erinnäisiä laskutoimituksia.
+Halutaan järjestelmä, jolla käyttäjä voi laskea peruslaskutoimituksia: summa, erotus,  tulo ja osamäärä. Lisäksi halutaan joitain erikoislaskutoimituksia sekä muunnoksia.
 
-Käyttäjä syöttää tekstikenttään luvun näppäimistöllä (tai laskimessa valittavissa?). Sitten käyttäjä valitsee laskutoimituksen, joka valittavissa laskimessa (tai näppäimistöllä?), ja sen jälkeen toisen luvun (tai esim. toisen laskutoimituksen sulkeissa?). Laskutoimitus suoritetaan näiden lukujen välillä.
+Laskimessa on kolme tekstikenttää. Kahten ensimmäiseen syötetään lukuja, ja kolmanteen tulostuu tulos. Muunnoksissa on käytössä vain ylin syöttökenttä ja tuloskenttä.
 
-Laskimessa on kaksi tekstikenttää. Toiseen käyttäjä syöttää lukuja, ja toiseen tulee tulos. Tavoitteena olisi, että lauseke olisi käytäjälle näkyvissä.
+Peruslaskutoimituksissa käyttäjä syöttää laskimeen kaksi lukua. Sitten käyttäjä valitsee laskutoimituksen, ja tuloskenttään tulostuu näiden lukujen laskutoimituksen vastaus. Edellisen laskun vastaus tallentuu automaattisesti muistiin. Sen saa siirrettyä napin painalluksella tekstikenttään, jolloin sille voidaan tehdä haluttuja toimintoja. Nollaamalla laskin saadaan tyhjennettyä tekstikentät ja tulokseksi nolla.
 
-**Esimerkkitapaus:**
+Erikoislaskutoimituksessa päivämäärien laskenta käyttäjä syöttää laskimeen kaksi päivämäärää. Oikea toiminto valitsemalla tuloskenttään tulostuu päivämäärien välinen ero päivinä.
 
-* Käyttäjä syöttää syötekenttään luvun 3
+Lisäksi halutaan toiminto, joka muuntaa sentit tuumiksi ja tuumat senteiksi. Käyttäjä syöttää tekstikenttään halutun mitan. Sitten käyttäjä valitsee muunnon joko senteiksi tai tuumiksi. Tällöin haluttu tulos tulostuu tuloskenttään.
+
+Lisäksi halutaan toiminto, joka muuntaa kilot paunoiksi ja paunat kiloiksi. Käyttäjä syöttää tekstikenttään halutun painon. Sitten käyttäjä valitsee muunnon joko paunoiksi tai kiloiksi. Tällöin haluttu tulos tulostuu tuloskenttään.
+
+**Esimerkkitapauksia**
+
+**Esimerkkitapaus / Peruslaskutoimitus ja tallennetun vastauksen käyttö:**
+
+* Käyttäjä syöttää 1. tekstikenttään luvun 3
+* Käyttäjä syöttää 2. tekstikenttään luvun 2
 * Käyttäjä painaa +-nappia
-  * Syotekentässä: 3 +
-* Käyttäjä syöttää luvun 3
-* Käyttäjä painaa =-nappia
-  * Tuloskentässä: 3 + 3 = 6
+  * Tuloskentässä: 5
+* Käyttäjä painaa A-nappia
+  * 1. tekstikentässä: 5
+  * 2. tekstikenttä tyhjä
+  * tuloskenttä tyhjä
+
+**Esimerkkitapaus / Peruslaskutoimitus ja tallennetun vastauksen käyttö:**
+
+* Käyttäjä syöttää 1. tekstikenttään luvun 3
+* Käyttäjä syöttää 2. tekstikenttään luvun 2
 * Käyttäjä painaa +-nappia
-  * Tuloskentässä: 6 + 
+  * Tuloskentässä: 5
+* Käyttäjä painaa C-nappia
+  * 1. tekstikenttä tyhjä
+  * 2. tekstikenttä tyhjä
+  * tuloskentässä 0
+  
+  
 
-Siis tavoitteena on, että tässä laskimessa käyttäjä näkee syöttämänsä lausekkeen, eli voi tarkistaa, onko syöttänyt tiedot oikein. Tämä eroaa esim. Macin laskimesta, jossa lukuja on näkyvissä kerrallaan vain yksi, ja aiemmin syötettyjä lukuja ei pääse katsomaan. (Lisäksi lauseketta on mahdollista kumittaa, jos tämän tekeminen onnistuu. Tämäkin eroaa monesta laskimesta, jossa koko lauseke täytyy kirjoittaa uudelleen virheen sattuessa). Keskitytään siis toimivuuteen ja käyttömukavuuteen, ja se kulkee laajuuden edellä.
+**Esimerkkitapaus / Erikoislaskutoimitus päivämäärät:**
 
-En vielä tarkkaan tiedä, kuinka paljon laskutoimituksia laskimella on mahdollista laskea, ja mitä  erikoismerkkejä ( cos, murtoluvut, juuret, potenssit jne ) on valittavissa. Ja miten nämä ovat kirjoitettavissa näppäimistön avulla. (Määritelläänkö omat pikanäppäimet, vai käytetäänkö esim. latexista tuttuja \sqrt jne).
+* Käyttäjä syöttää 1. tekstikenttään 26 08 1995
+* Käyttäjä syöttää 2. tekstikenttään 27 08 1995
+* Käyttäjä painaa D-nappia
+  * Tuloskentässä päivämäärien ero, eli yksi päivä
+ 
+ **Esimerkkitapaus / Muunnos sentit tuumiksi:**
+
+* Käyttäjä syöttää 1. tekstikenttään 2.54
+* Käyttäjä painaa CI (cm to inches) -nappia
+  * Tuloskentässä tuumat eli yksi
+  * 
+  
+
+ **Esimerkkitapaus / Käyttäjä syöttää muun kuin numeron:**
+
+* Käyttäjä syöttää 1. tekstikenttään moi
+* Käyttäjä syöttää 2. tekstikenttään moimoi
+* Käyttäjä painaa +-nappia
+  * Laskin tulostaa virheilmoituksen 
 
 
-**Käyttäjä:** Laskimen käyttäjä
+**Käyttäjä:** 
+
+Laskimen käyttäjä
 
 **Toiminnot:** 
 
 * Avaa laskin
 * Syötä luku
 * Valitse laskutoimitus
-* (Kumita merkkejä) 
-* Pyydä vastaus
 * Nollaa tekstikenttä
