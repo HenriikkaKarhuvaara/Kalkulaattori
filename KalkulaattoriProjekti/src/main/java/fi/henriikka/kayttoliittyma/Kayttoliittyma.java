@@ -20,7 +20,6 @@ public class Kayttoliittyma implements Runnable {
      * Metodi luo kehyksen laskimelle, asettaa sille koon ja sulkuoperaation,
      * sekä luo komponentit ja asettaa ne näkyviksi.
      *
-     * @see
      */
     @Override
     public void run() {
@@ -42,7 +41,7 @@ public class Kayttoliittyma implements Runnable {
      * halutun toiminnallisuuden: tuloskenttää ei voi muokata, liittää
      * tapahtumankuuntelijan jokaiseen
      *
-     * @param container 
+     * @param container Laskimen container
      *
      */
     private void luoKomponentit(Container container) {
