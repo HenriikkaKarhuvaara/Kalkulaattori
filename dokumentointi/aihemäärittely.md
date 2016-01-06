@@ -12,7 +12,7 @@ Lisäksi halutaan toiminto, joka muuntaa sentit tuumiksi ja tuumat senteiksi. K�
 
 Lisäksi halutaan toiminto, joka muuntaa kilot paunoiksi ja paunat kiloiksi. Käyttäjä syöttää tekstikenttään halutun painon. Sitten käyttäjä valitsee muunnon joko paunoiksi tai kiloiksi. Tällöin haluttu tulos tulostuu tuloskenttään.
 
-**Esimerkkitapauksia**
+**Esimerkkitapauksia:**
 
 **Esimerkkitapaus / Peruslaskutoimitus ja tallennetun vastauksen käyttö:**
 
@@ -50,8 +50,6 @@ Lisäksi halutaan toiminto, joka muuntaa kilot paunoiksi ja paunat kiloiksi. Kä
 * Käyttäjä syöttää 1. tekstikenttään 2.54
 * Käyttäjä painaa CI (cm to inches) -nappia
   * Tuloskentässä tuumat eli yksi
-  * 
-  
 
  **Esimerkkitapaus / Käyttäjä syöttää muun kuin numeron:**
 
@@ -69,5 +67,5 @@ Laskimen käyttäjä
 
 * Avaa laskin
 * Syötä luku
-* Valitse laskutoimitus
-* Nollaa tekstikenttä
+* Valitse toimitus
+* Sulje laskin
