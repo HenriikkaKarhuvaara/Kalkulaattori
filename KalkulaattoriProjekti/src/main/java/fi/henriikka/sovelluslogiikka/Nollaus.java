@@ -1,8 +1,8 @@
+package fi.henriikka.sovelluslogiikka;
+
 /**
  * Luokka tarjoaa metodin nollaustoiminnolle.
  */
-package fi.henriikka.sovelluslogiikka;
-
 public class Nollaus extends PerusToiminto {
 
     /**
@@ -12,7 +12,7 @@ public class Nollaus extends PerusToiminto {
      * @param x Käyttäjän antama syöte
      * @param y Käyttäjän antama syöte
      *
-     * @return yläluokan Toiminto parametrin tulos arvo eli nolla.
+     * @return yläluokan Toiminto parametrin tulos arvo, eli nolla
      */
     @Override
     public double suoritaToiminto(double x, double y) {

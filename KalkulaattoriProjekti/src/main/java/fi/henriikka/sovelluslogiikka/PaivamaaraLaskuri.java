@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package fi.henriikka.sovelluslogiikka;
 
 import java.text.ParseException;
@@ -11,12 +6,20 @@ import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
 /**
+ * Luokka antaa toiminnallisuuden laskea päivämäärien erotuksia.
  *
- * @author henriikkakarhuvaara
  */
 public class PaivamaaraLaskuri {
-    
 
+    /**
+     * Metodi muuttaa käyttäjän antamat tekstijonot päivämääräolioiksi Laskee
+     * päivämäärien erotuksen päivinä Palauttaa vastauksen
+     *
+     * @param x
+     * @param y
+     * 
+     * @return Päivämäärien erotus päivinä
+     */
     public String laskePaivamaarienEro(String x, String y) {
 
         SimpleDateFormat myFormat = new SimpleDateFormat("dd MM yyyy");

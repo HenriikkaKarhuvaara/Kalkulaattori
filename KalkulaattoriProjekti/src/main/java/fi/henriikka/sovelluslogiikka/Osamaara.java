@@ -1,8 +1,8 @@
+package fi.henriikka.sovelluslogiikka;
+
 /**
  * Luokka tarjoaa metodin "laske" suorituksen toiminnolle osamaara.
  */
-package fi.henriikka.sovelluslogiikka;
-
 public class Osamaara extends PerusToiminto {
 
     private boolean onnistuikoJako;
@@ -13,8 +13,10 @@ public class Osamaara extends PerusToiminto {
 
     /**
      * Metodi laskee annettujen parametrien osamaaran, jos jakaja ei ole nolla,
-     * ja palauttaa sen arvon. Jos jakaja on nolla, kertoo metodi, että
-     * jakaminen ei onnistu.
+     * ja palauttaa sen arvon
+     * Asettaa sen yläluokan parametrin tulos arvoksi
+     * Jos jakaja on nolla, kertoo metodi, että
+     * jakaminen ei onnistu asettamalla booleanin onnistuikoJako arvoksi false.
      *
      * @param x Käyttäjän antama syöte
      * @param y Käyttäjän antama syöte
@@ -36,8 +38,6 @@ public class Osamaara extends PerusToiminto {
 
     /**
      * Metodi kertoo, onko jakaminen onnistunut.
-     *
-     *
      *
      * @return Boolean true tai false sen mukaan, onko jako tehty.
      */

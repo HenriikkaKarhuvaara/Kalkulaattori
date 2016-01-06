@@ -1,6 +1,3 @@
-/*
- * Luokka luo laskimen graafisen käyttöliittymän.
- */
 package fi.henriikka.kayttoliittyma;
 
 import java.awt.Container;
@@ -12,14 +9,18 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.WindowConstants;
 
+/**
+ * Luokka luo laskimen graafisen käyttöliittymän.
+ */
 public class Kayttoliittyma implements Runnable {
 
     private JFrame frame;
 
-
-    /*
-     * Metodi luo kehyksen laskimelle, asettaa sille koon ja sulkuoperaation, sekä luo komponentit ja asettaa ne näkyviksi.
+    /**
+     * Metodi luo kehyksen laskimelle, asettaa sille koon ja sulkuoperaation,
+     * sekä luo komponentit ja asettaa ne näkyviksi.
      *
+     * @see
      */
     @Override
     public void run() {
@@ -35,20 +36,23 @@ public class Kayttoliittyma implements Runnable {
     }
 
     /**
-     * Metodi luo laskimen tekstikentät ja nappulat.
+     * Metodi luo laskimen "layoutin", tekstikentät, nappulapaneelit ja nappulat
+     * Lisää tekstikentät containeriin, nappulat paneeleihinsa ja paneelit
+     * containeriin Nimeää ne tekstikentät ja nappulat, ja asettaa niille
+     * halutun toiminnallisuuden: tuloskenttää ei voi muokata, liittää
+     * tapahtumankuuntelijan jokaiseen
      *
-     * @param container
+     * @param container 
+     *
      */
     private void luoKomponentit(Container container) {
 
         frame.setLayout(new GridLayout(5, 1));
-        //Ensimmäinen luku kertoo laskimen rivien määrän, toinen luku kertoo sarakkeiden määrän.
 
         JTextField syotekentta = new JTextField();
         JTextField toinenSyotekentta = new JTextField();
         JTextField tuloskentta = new JTextField();
         tuloskentta.setEnabled(false);
-        //Käyttäjä ei pääse käsiksi tuloskentän sisältöön.
 
         container.add(syotekentta);
         container.add(toinenSyotekentta);
@@ -63,10 +67,10 @@ public class Kayttoliittyma implements Runnable {
         JButton pvm = new JButton("D");
         JButton tuumatSenteiksi = new JButton("IC");
         JButton sentitTuumiksi = new JButton("CI");
-        
+
         JButton kilotPaunoiksi = new JButton("KP");
         JButton paunatKiloiksi = new JButton("PK");
-        
+
         tuloskentta.setName("tulos");
         syotekentta.setName("syote");
         toinenSyotekentta.setName("tsyote");
@@ -79,7 +83,7 @@ public class Kayttoliittyma implements Runnable {
         pvm.setName("D");
         tuumatSenteiksi.setName("IC");
         sentitTuumiksi.setName("CI");
-        
+
         kilotPaunoiksi.setName("KP");
         paunatKiloiksi.setName("PK");
 
@@ -99,7 +103,6 @@ public class Kayttoliittyma implements Runnable {
         sentitTuumiksi.addActionListener(kasittelija);
         kilotPaunoiksi.addActionListener(kasittelija);
         paunatKiloiksi.addActionListener(kasittelija);
-
 
         JPanel nappulapaneeli = new JPanel(new GridLayout(1, 6));
         nappulapaneeli.add(summa);

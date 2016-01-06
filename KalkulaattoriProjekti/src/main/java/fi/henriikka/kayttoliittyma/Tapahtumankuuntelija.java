@@ -1,6 +1,3 @@
-/*
- * Luokka tarjoaa toiminnallisuuden laskimen nappuloille.
- */
 package fi.henriikka.kayttoliittyma;
 
 import fi.henriikka.sovelluslogiikka.Muisti;
@@ -11,6 +8,9 @@ import static java.lang.Double.parseDouble;
 import javax.swing.JButton;
 import javax.swing.JTextField;
 
+/**
+ * Luokka yhdistää toiminnallisuuden komponenttien graafisiin ilmentymiin.
+ */
 public class Tapahtumankuuntelija implements ActionListener {
 
     private JButton summa;
@@ -32,7 +32,7 @@ public class Tapahtumankuuntelija implements ActionListener {
 
     public Tapahtumankuuntelija(
             JButton summa, JButton erotus, JButton tulo, JButton osamaara,
-            JButton nollaa, JButton viimeisinVastaus, JButton pvm, JButton tuumatSenteiksi, JButton sentitTuumiksi, 
+            JButton nollaa, JButton viimeisinVastaus, JButton pvm, JButton tuumatSenteiksi, JButton sentitTuumiksi,
             JButton kilotPaunoiksi, JButton paunatKiloiksi,
             JTextField tuloskentta, JTextField syotekentta, JTextField toinenSyotekentta) {
 
@@ -47,7 +47,7 @@ public class Tapahtumankuuntelija implements ActionListener {
         this.sentitTuumiksi = sentitTuumiksi;
         this.kilotPaunoiksi = kilotPaunoiksi;
         this.paunatKiloiksi = paunatKiloiksi;
-        
+
         this.tuloskentta = tuloskentta;
         this.syotekentta = syotekentta;
         this.toinenSyotekentta = toinenSyotekentta;
@@ -56,7 +56,9 @@ public class Tapahtumankuuntelija implements ActionListener {
     }
 
     /**
-     * Metodi käy läpi mahdolliset tapahtumakulut.
+     * Metodi selvittää mitä nappulaa on painettu, ja suorittaa siihen liittyvän
+     * toiminnallisuuden Lukee käyttäjän syötteitä syötekentistä ja näyttää
+     * vastauksen tulokentässä.
      *
      * @param ae Tapahtuma
      *
@@ -83,56 +85,56 @@ public class Tapahtumankuuntelija implements ActionListener {
         } else if (ae.getSource() == viimeisinVastaus) {
 
             ans = toimintojenkasittelija.annaViimeisinVastaus();
-               // nolla, jos mitään ei laskettu
-            
+             // nolla, jos mitään ei laskettu
+
             syotekentta.setText("" + ans);
             toinenSyotekentta.setText("");
             tuloskentta.setText("");
 
         } else if (ae.getSource() == tuumatSenteiksi) {
-            
+
             try {
                 arvo1 = parseDouble(syotekentta.getText());
             } catch (Exception e) {
                 syotekentta.setText("Syötä numero!");
             }
-             
+
             double sentit = toimintojenkasittelija.tuumatSenteiksi(arvo1);
             tuloskentta.setText("Sentteinä: " + sentit);
-            
+
         } else if (ae.getSource() == sentitTuumiksi) {
-           
+
             try {
                 arvo1 = parseDouble(syotekentta.getText());
             } catch (Exception e) {
                 syotekentta.setText("Syötä numero!");
             }
-             
+
             double tuumat = toimintojenkasittelija.sentitTuumiksi(arvo1);
             tuloskentta.setText("Tuumina: " + tuumat);
-            
+
         } else if (ae.getSource() == kilotPaunoiksi) {
-            
+
             try {
                 arvo1 = parseDouble(syotekentta.getText());
             } catch (Exception e) {
                 syotekentta.setText("Syötä numero!");
             }
-             
+
             double paunat = toimintojenkasittelija.kilotPaunoiksi(arvo1);
             tuloskentta.setText("Paunoina: " + paunat);
-        
+
         } else if (ae.getSource() == paunatKiloiksi) {
-            
+
             try {
                 arvo1 = parseDouble(syotekentta.getText());
             } catch (Exception e) {
                 syotekentta.setText("Syötä numero!");
             }
-             
+
             double kilot = toimintojenkasittelija.paunatKiloiksi(arvo1);
             tuloskentta.setText("Kiloina: " + kilot);
-            
+
         } else {
 
             try {
@@ -166,6 +168,7 @@ public class Tapahtumankuuntelija implements ActionListener {
                 toinenSyotekentta.setText("");
 
             }
+
             tuloskentta.setText("" + laskunTulos);
             toimintojenkasittelija.lisaaMuistiin(laskunTulos);
 

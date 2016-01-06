@@ -155,12 +155,33 @@ public class KayttoliittymaTest extends AssertJSwingJUnitTestCase{
     }
     
     @Test
-    public void laskinToimiiOikeinKunKayttajaSyottaaMuunKuinNumeronLisaToiminnoissa() {
+    public void laskinToimiiOikeinKunKayttajaSyottaaMuunKuinNumeronLisaToiminnossaKP() {
         window.textBox("syote").setText("Moi");
         window.button("KP").click();
         window.textBox("syote").requireText("Syötä numero!");
     }
      
+    @Test
+    public void laskinToimiiOikeinKunKayttajaSyottaaMuunKuinNumeronLisaToiminnossaPK() {
+        window.textBox("syote").setText("Moi");
+        window.button("PK").click();
+        window.textBox("syote").requireText("Syötä numero!");
+    }
+    
+    @Test
+    public void laskinToimiiOikeinKunKayttajaSyottaaMuunKuinNumeronLisaToiminnossaIC() {
+        window.textBox("syote").setText("Moi");
+        window.button("IC").click();
+        window.textBox("syote").requireText("Syötä numero!");
+    }
+    
+    @Test
+    public void laskinToimiiOikeinKunKayttajaSyottaaMuunKuinNumeronLisaToiminnossaCI() {
+        window.textBox("syote").setText("Moi");
+        window.button("CI").click();
+        window.textBox("syote").requireText("Syötä numero!");
+    }
+    
     
     @Override
     protected void onSetUp() {

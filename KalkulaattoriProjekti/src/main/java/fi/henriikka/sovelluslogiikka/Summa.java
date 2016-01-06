@@ -1,12 +1,14 @@
+package fi.henriikka.sovelluslogiikka;
+
 /**
  * Luokka tarjoaa metodin "laske" suorituksen toiminnolle summa.
  */
-package fi.henriikka.sovelluslogiikka;
-
 public class Summa extends PerusToiminto {
 
     /**
-     * Metodi laskee annettujen parametrien summan, ja palauttaa sen arvon.
+     * Metodi laskee annettujen parametrien summan
+     * Asettaa yläluokan parametrille tulos tämän arvon
+     * Palauttaa sen.
      *
      * @param x Käyttäjän antama syöte
      * @param y Käyttäjän antama syöte
