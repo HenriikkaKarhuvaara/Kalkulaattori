@@ -6,6 +6,8 @@ package fi.henriikka.sovelluslogiikka;
  * 
  */
 public class SentitJaTuumat {
+    private double sentit;
+    private double tuumat;
     
     /**
      * Metodi tulkitsee käyttäjän syötteen sentteinä, ja muuntaa sen tuumiksi.
@@ -16,8 +18,8 @@ public class SentitJaTuumat {
      */
     public double sentitTuumiksi(double cm) {
         
-        double tuumat = cm / 2.54;
-        return tuumat;
+        this.tuumat = cm / 2.54;
+        return this.tuumat;
         
     }
     
@@ -31,7 +33,7 @@ public class SentitJaTuumat {
      */
     public double tuumatSenteiksi(double inch) {
         
-        double sentit = inch * 2.54;
-        return sentit;
+        this.sentit = inch * 2.54;
+        return this.sentit;
     }
 }

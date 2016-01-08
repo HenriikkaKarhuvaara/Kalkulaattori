@@ -5,6 +5,7 @@ package fi.henriikka.sovelluslogiikka;
  */
 public class Muisti {
     private double vastaus;
+    
 
     public Muisti() {
         vastaus = 0;
@@ -27,5 +28,7 @@ public class Muisti {
     public double getVastaus() {
         return vastaus;
     }
+    
+ 
 
 }

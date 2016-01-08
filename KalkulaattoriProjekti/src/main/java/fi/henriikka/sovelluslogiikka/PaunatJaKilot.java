@@ -6,6 +6,9 @@ package fi.henriikka.sovelluslogiikka;
  * 
  */
 public class PaunatJaKilot {
+    private double kilot;
+    private double paunat;
+    
     
     /**
      * Metodi tulkitsee käyttäjän syötteen paunoina, ja muuntaa sen kiloiksi.
@@ -14,10 +17,10 @@ public class PaunatJaKilot {
      * 
      * @return Käyttäjän syöte muunnettuna kiloiksi
      */
-    public double paunatKiloiksi(double pounds){
+    public double paunatKiloiksi(double paunat){
         
-        double kilot = pounds / 2.2046;
-        return kilot;
+        this.kilot = paunat / 2.2046;
+        return this.kilot;
         
     }
     
@@ -30,7 +33,7 @@ public class PaunatJaKilot {
      */
     public double kilotPaunoiksi(double kilot) {
         
-        double paunat = kilot * 2.2046;
-        return paunat;
+        this.paunat = kilot * 2.2046;
+        return this.paunat;
     }
 }

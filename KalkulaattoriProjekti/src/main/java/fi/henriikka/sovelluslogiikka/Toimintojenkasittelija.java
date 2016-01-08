@@ -1,5 +1,6 @@
 package fi.henriikka.sovelluslogiikka;
 
+import java.util.Date;
 import java.util.HashMap;
 
 /**
@@ -49,7 +50,7 @@ public class Toimintojenkasittelija {
      *
      * @return päivämäärien ero päivinä
      */
-    public String suoritaPaivamaaralaskenta(String x, String y) {
+    public double suoritaPaivamaaralaskenta(Date x, Date y) {
         return pvm.laskePaivamaarienEro(x, y);
     }
 
@@ -57,7 +58,7 @@ public class Toimintojenkasittelija {
      * Tallentaa annetun arvon muistiin, eli asettaa luokan Muisti vastauksen
      * arvoksi annetun arvon.
      *
-     * @param x
+     * @param x tallennettava arvo
      */
     public void lisaaMuistiin(double x) {
         muisti.setVastaus(x);
@@ -72,6 +73,9 @@ public class Toimintojenkasittelija {
     public double annaViimeisinVastaus() {
         return muisti.getVastaus();
     }
+    
+    
+    
 
     /**
      * Muuttaa annetun arvon tuumiksi kutsumalla luokan SentitJaTuumat oikeaa

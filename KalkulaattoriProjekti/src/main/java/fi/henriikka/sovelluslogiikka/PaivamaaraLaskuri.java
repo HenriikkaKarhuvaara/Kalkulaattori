@@ -1,5 +1,6 @@
 package fi.henriikka.sovelluslogiikka;
 
+import fi.henriikka.kayttoliittyma.Tapahtumankuuntelija;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -17,22 +18,16 @@ public class PaivamaaraLaskuri {
      *
      * @param x
      * @param y
-     * 
+     *
      * @return Päivämäärien erotus päivinä
      */
-    public String laskePaivamaarienEro(String x, String y) {
+    public double laskePaivamaarienEro(Date x, Date y) {
 
-        SimpleDateFormat myFormat = new SimpleDateFormat("dd MM yyyy");
-        String vastaus = "";
+        double vastaus = 0;
 
-        try {
-            Date date1 = myFormat.parse(x);
-            Date date2 = myFormat.parse(y);
-            long diff = date2.getTime() - date1.getTime();
-            vastaus = "Päiviä: " + TimeUnit.DAYS.convert(diff, TimeUnit.MILLISECONDS);
-        } catch (ParseException e) {
-            System.out.println("Päivämäärät väärässä muodossa!");
-        }
+        long diff = y.getTime() - x.getTime();
+        vastaus = TimeUnit.DAYS.convert(diff, TimeUnit.MILLISECONDS);
+
         return vastaus;
 
     }

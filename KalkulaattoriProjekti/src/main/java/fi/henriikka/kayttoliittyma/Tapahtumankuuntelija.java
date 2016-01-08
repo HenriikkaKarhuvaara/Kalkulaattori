@@ -5,6 +5,9 @@ import fi.henriikka.sovelluslogiikka.Toimintojenkasittelija;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import static java.lang.Double.parseDouble;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import javax.swing.JButton;
 import javax.swing.JTextField;
 
@@ -69,23 +72,32 @@ public class Tapahtumankuuntelija implements ActionListener {
         double arvo1 = 0;
         double arvo2 = 0;
         double laskunTulos = 0;
-        String ekapvm = "";
-        String tokapvm = "";
-        String tulos = "";
+        
+        
 
         if (ae.getSource() == pvm) {
 
-            ekapvm = "" + syotekentta.getText();
-            tokapvm = "" + toinenSyotekentta.getText();
+            SimpleDateFormat myFormat = new SimpleDateFormat("dd mm yyyy");
+            String x = "" + syotekentta.getText();
+            String y = "" + toinenSyotekentta.getText();
 
-            tulos = toimintojenkasittelija.suoritaPaivamaaralaskenta(ekapvm, tokapvm);
+            try {
+                Date ekapvm = myFormat.parse(x);
+                Date tokapvm = myFormat.parse(y);
+                laskunTulos = toimintojenkasittelija.suoritaPaivamaaralaskenta(ekapvm, tokapvm);
 
-            tuloskentta.setText(tulos);
+            } catch (ParseException e) {
+                syotekentta.setText("Syötä päivämäärä muodossa - dd mm yyyy!");
+            }
+
+            tuloskentta.setText("" + laskunTulos);
+            toimintojenkasittelija.lisaaMuistiin(laskunTulos);
 
         } else if (ae.getSource() == viimeisinVastaus) {
 
+            
             ans = toimintojenkasittelija.annaViimeisinVastaus();
-             // nolla, jos mitään ei laskettu
+            // nolla, jos mitään ei laskettu
 
             syotekentta.setText("" + ans);
             toinenSyotekentta.setText("");

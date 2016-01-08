@@ -98,8 +98,9 @@ public class KayttoliittymaTest extends AssertJSwingJUnitTestCase{
         window.textBox("syote").setText("3 8 1995");
         window.textBox("tsyote").setText("4 8 1995");
         window.button("D").click();
-        window.textBox("tulos").requireText("Päiviä: 1");
+        window.textBox("tulos").requireText("1.0");
     }
+   
     
     @Test
     public void tuumatSenteiksiNappulaToimii() {
@@ -180,6 +181,14 @@ public class KayttoliittymaTest extends AssertJSwingJUnitTestCase{
         window.textBox("syote").setText("Moi");
         window.button("CI").click();
         window.textBox("syote").requireText("Syötä numero!");
+    }
+    
+    @Test
+    public void laskinToimiiOikeinKunKayttajaSyottaaMuunKuinNumeronPaivamaarissa() {
+        window.textBox("syote").setText("Moi");
+        window.textBox("tsyote").setText("Moi");
+        window.button("D").click();
+        window.textBox("syote").requireText("Syötä päivämäärä muodossa - dd mm yyyy!");
     }
     
     
