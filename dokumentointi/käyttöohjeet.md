@@ -17,7 +17,7 @@ Sen saa siirrettyä A-napin painalluksella ensimmäiseen tekstikenttään.
 
 **Muunnokset**
 
-Laskin muuntaa sentit tuumiksi, kilot paunoksi ja päinvastoin. Käyttäjä syöttää ylimpään tekstikenttään luvun. Ja valitsee 
+Laskin muuntaa sentit tuumiksi, kilot paunoksi ja päinvastoin. Käyttäjä syöttää ylimpään tekstikenttään luvun ja valitsee 
 halutun muutoksen.
 
 **Laskimen nollaus**
