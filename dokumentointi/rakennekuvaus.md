@@ -24,7 +24,8 @@ abstraktin luokan Perustoiminto, ja vastauksen käsittely toimii tämän kautta.
 Muisti, PaivamaaraLaskuri, SentitJaTuumat sekä PaunatJaKilot
 ovat itsenäisiä luokkia, joissa on määritelty toiminnon suoritus.
 
-Jos aikaa olisi ollut enemmän, olisin luultavasti vaihtanut abstraktin luokan rajapintaan. Tässä laskimessa yläluokan 
-Perustoiminto parametrin tulosta ei oikeastaan tarvita. Rajapinta määrittäisi, että jokaisen toiminnon tulee toteuttaa
-suoritaToiminto-metodi ja JOKAINEN luokka toteuttaisi tämän rajapinnan. Tällöin hashMapin arvona toimisi rajapinta, ja
-toimintojenkäsittelijä voisi käydä jokaisen toiminnon hashMapin kautta.
+Jos aikaa olisi ollut enemmän, olisin muuttanut ohjelman rakennetta vielä siten, että toimintojenkäsittelijä ei tuntisi 
+luokkia Muisti, Paivamaaralaskuri, SentitJaTuumat ja PaunatJaKilot suoraan vaan abstraktin luokan tai rajapinnan kautta.
+Lisäksi olisi järkevää, jos kaikki toiminnot toteuttaisivat saman rajapinnan tai perisivät saman abstraktin luokan, 
+jolloin toimintojenkäsittelijä voisi käsitellä niitä yhdessä hashMapissa.
+
