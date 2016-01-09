@@ -14,4 +14,4 @@
 
 8.1.2016 / 1h / Muokkasin päivämäärätoimintoa, siten että virheilmoitus näkyy laskimessa. Lisäksi vastaus tallentuu.
 
-9.1.2016 / 2h / Sekvenssikaaviot, luokkakaavio, rakennekuvaus.
+9.1.2016 / 6h / Sekvenssikaaviot, luokkakaavio, rakennekuvaus, käyttöohje, testausdokumentti...
