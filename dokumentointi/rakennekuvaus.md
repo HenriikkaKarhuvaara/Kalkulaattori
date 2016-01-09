@@ -11,17 +11,17 @@ käsittelijänsä, joka vastaa siitä, että nappulaa painettaessa suoritetaan o
 tunne varsinaisia toimintoja, vaan se on antanut tämän tehtävän omalle toimintojenkäsittelijälleen.
 
 Toimintojenkäsittelillä on parametrina hashMap. Tarkoitus oli, että jokainen laskimen
-toiminto käsiteltäisiin tämän kautta, jolloin ohjelman rakenne olisi järkevämpi ja laajennettavampi.Nyt hashMapissa on kuitenkin vain laskimen perustoiminnot, ja luokalla on 
+toiminto käsiteltäisiin tämän kautta, jolloin ohjelman rakenne olisi järkevämpi ja laajennettavampi. Nyt hashMapissa on kuitenkin vain laskimen perustoiminnot, ja luokalla on 
 erikseen parametrit muisti, päivämäärälaskuri, sentit ja tuumat sekä paunat ja kilot.
 
 Kun toimintojenkäsittelijä saa tapahtumankuuntelijalta käskyn suorittaa perustoiminto, se etsii hashMapista oikean 
-toiminnon ja kutsuu se suoritusmetodia. Neljälle erillelle toiminnolle toimintojenkäsittelijällä on omat metodinsa.
+toiminnon ja kutsuu sen suoritusmetodia. Neljälle erillelle toiminnolle toimintojenkäsittelijällä on omat metodinsa.
 Kun toimintojenkäsittelijä saa käskyn suorittaa jonkun näistä neljästä erillisestä 
 toiminnosta, se osaa kutsua näiden suoritusmetodeja.
 
-Jokainen toiminto on oma luokkansa, ja niissä on määritelty toiminnonsuoritusmetodi. Perustoiminnot perivät
-abstraktin luokan Perustoiminto, ja vastauksen käsittely toimii tämän kautta. Yläluokalla Perustoiminto tulos, ja 
-alaluokat päivittävät tätä omien laskutoimitustensa tuloksilla. Muisti, PaivamaaraLaskuri, SentitJaTuumat sekä PaunatJaKilot
+Jokainen toiminto on oma luokkansa, ja niissä on määritelty toiminnon suoritus. Perustoiminnot perivät
+abstraktin luokan Perustoiminto, ja vastauksen käsittely toimii tämän kautta. Yläluokalla Perustoiminto on parametri tulos, ja alaluokat päivittävät tätä omien laskutoimitustensa tuloksilla. Abstrakti luokka toimii myös arvona hashMapissa.  
+Muisti, PaivamaaraLaskuri, SentitJaTuumat sekä PaunatJaKilot
 ovat itsenäisiä luokkia, joissa on määritelty toiminnon suoritus.
 
 Jos aikaa olisi ollut enemmän, olisin luultavasti vaihtanut abstraktin luokan rajapintaan. Tässä laskimessa yläluokan 
