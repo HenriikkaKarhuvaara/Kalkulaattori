@@ -11,6 +11,7 @@ import java.util.concurrent.TimeUnit;
  *
  */
 public class PaivamaaraLaskuri {
+
     private double vastaus;
 
     /**
@@ -23,8 +24,6 @@ public class PaivamaaraLaskuri {
      * @return Päivämäärien erotus päivinä
      */
     public double laskePaivamaarienEro(Date x, Date y) {
-
-        
 
         long diff = y.getTime() - x.getTime();
         vastaus = TimeUnit.DAYS.convert(diff, TimeUnit.MILLISECONDS);
