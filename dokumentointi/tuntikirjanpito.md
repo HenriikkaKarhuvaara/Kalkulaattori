@@ -11,3 +11,7 @@
 5.1.2016 / 2h / Muunnosoperaatiot pituuksille ja painoille.
 
 6.1.2016 / 4h / Testejä, pit ja cobertura, javadoc, luokkakaavio, aihemäärittely, sekvenssikaaviot.
+
+8.1.2016 / 1h / Muokkasin päivämäärätoimintoa, siten että virheilmoitus näkyy laskimessa. Lisäksi vastaus tallentuu.
+
+9.1.2016 / 2h / Sekvenssikaaviot, luokkakaavio, rakennekuvaus.
