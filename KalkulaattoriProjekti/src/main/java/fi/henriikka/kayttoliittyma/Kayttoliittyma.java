@@ -47,15 +47,18 @@ public class Kayttoliittyma implements Runnable {
     private void luoKomponentit(Container container) {
 
         frame.setLayout(new GridLayout(5, 1));
+        
 
         JTextField syotekentta = new JTextField();
         JTextField toinenSyotekentta = new JTextField();
         JTextField tuloskentta = new JTextField();
+        
         tuloskentta.setEnabled(false);
 
         container.add(syotekentta);
         container.add(toinenSyotekentta);
         container.add(tuloskentta);
+        
 
         JButton summa = new JButton("+");
         JButton erotus = new JButton("-");
@@ -66,9 +69,9 @@ public class Kayttoliittyma implements Runnable {
         JButton pvm = new JButton("D");
         JButton tuumatSenteiksi = new JButton("IC");
         JButton sentitTuumiksi = new JButton("CI");
-
         JButton kilotPaunoiksi = new JButton("KP");
         JButton paunatKiloiksi = new JButton("PK");
+        
 
         tuloskentta.setName("tulos");
         syotekentta.setName("syote");
@@ -82,9 +85,9 @@ public class Kayttoliittyma implements Runnable {
         pvm.setName("D");
         tuumatSenteiksi.setName("IC");
         sentitTuumiksi.setName("CI");
-
         kilotPaunoiksi.setName("KP");
         paunatKiloiksi.setName("PK");
+        
 
         Tapahtumankuuntelija kasittelija = new Tapahtumankuuntelija(
                 summa, erotus, tulo, osamaara, nollaa, viimeisinVastaus,
@@ -102,6 +105,7 @@ public class Kayttoliittyma implements Runnable {
         sentitTuumiksi.addActionListener(kasittelija);
         kilotPaunoiksi.addActionListener(kasittelija);
         paunatKiloiksi.addActionListener(kasittelija);
+        
 
         JPanel nappulapaneeli = new JPanel(new GridLayout(1, 6));
         nappulapaneeli.add(summa);
@@ -110,14 +114,15 @@ public class Kayttoliittyma implements Runnable {
         nappulapaneeli.add(osamaara);
         nappulapaneeli.add(nollaa);
         nappulapaneeli.add(viimeisinVastaus);
+        
 
         JPanel toinenNappulapaneeli = new JPanel(new GridLayout(1, 5));
-        toinenNappulapaneeli.add(viimeisinVastaus);
         toinenNappulapaneeli.add(pvm);
         toinenNappulapaneeli.add(tuumatSenteiksi);
         toinenNappulapaneeli.add(sentitTuumiksi);
         toinenNappulapaneeli.add(kilotPaunoiksi);
         toinenNappulapaneeli.add(paunatKiloiksi);
+        
 
         container.add(nappulapaneeli);
         container.add(toinenNappulapaneeli);

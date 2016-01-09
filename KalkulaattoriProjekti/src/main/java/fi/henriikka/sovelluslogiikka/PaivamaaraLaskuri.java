@@ -11,6 +11,7 @@ import java.util.concurrent.TimeUnit;
  *
  */
 public class PaivamaaraLaskuri {
+    private double vastaus;
 
     /**
      * Metodi muuttaa käyttäjän antamat tekstijonot päivämääräolioiksi Laskee
@@ -23,7 +24,7 @@ public class PaivamaaraLaskuri {
      */
     public double laskePaivamaarienEro(Date x, Date y) {
 
-        double vastaus = 0;
+        
 
         long diff = y.getTime() - x.getTime();
         vastaus = TimeUnit.DAYS.convert(diff, TimeUnit.MILLISECONDS);

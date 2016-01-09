@@ -93,6 +93,18 @@ public class KayttoliittymaTest extends AssertJSwingJUnitTestCase{
         window.textBox("tulos").requireText("");
     }
     
+    
+    @Test
+    public void ansNappulaToimiiPaivamaarassa() {
+        window.textBox("syote").setText("13 1 2016");
+        window.textBox("tsyote").setText("14 1 2016");
+        window.button("D").click();
+        window.button("A").click();
+        window.textBox("syote").requireText("1.0");
+        window.textBox("tsyote").requireText("");
+        window.textBox("tulos").requireText("");
+    }
+    
     @Test
     public void pvmNappulaToimii() {
         window.textBox("syote").setText("3 8 1995");
@@ -148,7 +160,7 @@ public class KayttoliittymaTest extends AssertJSwingJUnitTestCase{
         window.requireVisible();
     }
     
-    @Test
+   @Test
     public void laskinToimiiOikeinKunKayttajaSyottaaMuunKuinNumeron() {
         window.textBox("syote").setText("Moi");
         window.button("+").click();
