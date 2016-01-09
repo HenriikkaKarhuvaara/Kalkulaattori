@@ -25,7 +25,7 @@ Lisäksi halutaan toiminto, joka muuntaa kilot paunoiksi ja paunat kiloiksi. Kä
   * 2. tekstikenttä tyhjä
   * tuloskenttä tyhjä
 
-**Esimerkkitapaus / Peruslaskutoimitus ja tallennetun vastauksen käyttö:**
+**Esimerkkitapaus / Peruslaskutoimitus ja vastauksen nollaus:**
 
 * Käyttäjä syöttää 1. tekstikenttään luvun 3
 * Käyttäjä syöttää 2. tekstikenttään luvun 2
