@@ -15,3 +15,5 @@
 8.1.2016 / 1h / Muokkasin päivämäärätoimintoa, siten että virheilmoitus näkyy laskimessa. Lisäksi vastaus tallentuu.
 
 9.1.2016 / 6h / Sekvenssikaaviot, luokkakaavio, rakennekuvaus, käyttöohje, testausdokumentti...
+
+10.1.2016 / 3h / Yritin luoda jar-tiedostoa, checkstyle, javadocin muokkausta, viimeistelyä.

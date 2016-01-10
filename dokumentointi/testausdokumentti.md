@@ -15,4 +15,6 @@ Käyttöliittymää ei ilmeisesti olisi tarvinnut testata, mutta OTM-kurssilta j
 - Tapahtumankuuntelijan testaus on myös täydet 100% sekä rivikattavuudelta että mutaatiotestaukselta.
 - Kayttoliittymassa tutkimatta jää ikkunan sulkumekanismi ja metodi getFrame(). Rivikattavuus on 99%, mutta mutaatiotestaus    jää 94%.
 
- Laskinta käyttäessä kuitenkin näyttäisi siltä, että testaamattakin jääneet osiot toimisivat halutusti.
+Laskinta käyttäessä kuitenkin näyttäisi siltä, että testaamattakin jääneet osiot toimisivat halutusti.
+
+- Jar-tiedostoa en saanut millään toimimaan, vaikka yritin mielestäni vaikka mitä versioita luokan nimestä: kalkulaattori.main, fi.henriikka.kalkulaattori.main, main.java jne.
