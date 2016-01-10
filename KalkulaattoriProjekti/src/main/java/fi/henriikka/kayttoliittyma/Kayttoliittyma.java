@@ -35,11 +35,9 @@ public class Kayttoliittyma implements Runnable {
     }
 
     /**
-     * Metodi luo laskimen "layoutin", tekstikentät, nappulapaneelit ja nappulat
-     * Lisää tekstikentät containeriin, nappulat paneeleihinsa ja paneelit
-     * containeriin Nimeää ne tekstikentät ja nappulat, ja asettaa niille
-     * halutun toiminnallisuuden: tuloskenttää ei voi muokata, liittää
-     * tapahtumankuuntelijan jokaiseen
+     * Metodi luo laskimeen tekstikentät ja nappulat sekä 
+     * nimeää ne testejä varten, lisäksi liittää nappuloihin
+     * tapahtumankuuntelijan.
      *
      * @param container Laskimen container
      *

@@ -6,9 +6,7 @@ package fi.henriikka.sovelluslogiikka;
 public class Tulo extends PerusToiminto {
 
     /**
-     * Metodi laskee annettujen parametrien erotuksen 
-     * Asettaa yläluokan parametrille tulos tämän arvon 
-     * Palauttaa sen.
+     * Metodi laskee annettujen parametrien erotuksen, asettaa yläluokan parametrille tulos tämän arvon ja palauttaa sen.
      *
      * @param x Käyttäjän antama syöte
      * @param y Käyttäjän antama syöte

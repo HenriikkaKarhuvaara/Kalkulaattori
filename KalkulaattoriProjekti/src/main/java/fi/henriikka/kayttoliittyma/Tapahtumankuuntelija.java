@@ -12,7 +12,8 @@ import javax.swing.JButton;
 import javax.swing.JTextField;
 
 /**
- * Luokka yhdistää toiminnallisuuden komponenttien graafisiin ilmentymiin.
+ * Luokka yhdistää graafisiin komponentteihin 
+ * oikean toiminnallisuuden.
  */
 public class Tapahtumankuuntelija implements ActionListener {
 
@@ -60,7 +61,7 @@ public class Tapahtumankuuntelija implements ActionListener {
 
     /**
      * Metodi selvittää mitä nappulaa on painettu, ja suorittaa siihen liittyvän
-     * toiminnallisuuden Lukee käyttäjän syötteitä syötekentistä ja näyttää
+     * toiminnallisuuden, lukee käyttäjän syötteitä syötekentistä ja näyttää
      * vastauksen tulokentässä.
      *
      * @param ae Tapahtuma

@@ -14,7 +14,7 @@ public class Muisti {
 /**
  * Asettaa parametrin vastaus arvoksi annetun arvon.
  * 
- * @param x Laskun vastaus
+ * @param x Tallennettavan laskun vastaus
  */
     public void setVastaus(double x) {
         vastaus = x;
@@ -23,7 +23,7 @@ public class Muisti {
 /**
  * Palauttaa parametrin vastaus.
  * 
- * @return parametri vastaus
+ * @return Parametri tallennettu vastaus
  */
     public double getVastaus() {
         return vastaus;

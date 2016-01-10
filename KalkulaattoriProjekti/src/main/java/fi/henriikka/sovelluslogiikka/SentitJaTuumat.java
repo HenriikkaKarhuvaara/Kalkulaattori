@@ -2,7 +2,7 @@
 package fi.henriikka.sovelluslogiikka;
 
 /**
- * Luokka tarjoaa mahdollisuuden muuntaa sentit tuumiksi.
+ * Luokka tarjoaa mahdollisuuden muuntaa sentit tuumiksi ja tuumat senteiksi.
  * 
  */
 public class SentitJaTuumat {
@@ -10,7 +10,8 @@ public class SentitJaTuumat {
     private double tuumat;
     
     /**
-     * Metodi tulkitsee käyttäjän syötteen sentteinä, ja muuntaa sen tuumiksi.
+     * Metodi tulkitsee käyttäjän syötteen sentteinä, muuntaa sen tuumiksi ja 
+     * palauttaa arvon.
      * 
      * @param cm käyttäjän syöttämä pituus
      * 
@@ -25,7 +26,8 @@ public class SentitJaTuumat {
     
     
     /** 
-     * Metodi tulkitsee käyttäjän syötteen tuumina, ja muuntaa sen senteiksi.
+     * Metodi tulkitsee käyttäjän syötteen tuumina, muuntaa sen senteiksi
+     * ja palauttaa arvon.
      * 
      * @param inch käyttäjän syöttämä pituus
      * 

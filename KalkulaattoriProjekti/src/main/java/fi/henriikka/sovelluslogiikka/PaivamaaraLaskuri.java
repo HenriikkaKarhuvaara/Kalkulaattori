@@ -15,8 +15,8 @@ public class PaivamaaraLaskuri {
     private double vastaus;
 
     /**
-     * Metodi muuttaa käyttäjän antamat tekstijonot päivämääräolioiksi Laskee
-     * päivämäärien erotuksen päivinä Palauttaa vastauksen
+     * Metodi laskee
+     * päivämäärien erotuksen päivinä ja palauttaa vastauksen.
      *
      * @param x ensimmäinen päivämäärä
      * @param y toinen päivämäärä

@@ -11,7 +11,8 @@ public class PaunatJaKilot {
     
     
     /**
-     * Metodi tulkitsee käyttäjän syötteen paunoina, ja muuntaa sen kiloiksi.
+     * Metodi tulkitsee käyttäjän syötteen paunoina, muuntaa sen kiloiksi ja 
+     * palauttaa arvon.
      * 
      * @param paunat käyttäjän syöttämä paino
      * 
@@ -25,7 +26,8 @@ public class PaunatJaKilot {
     }
     
      /**
-     * Metodi tulkitsee käyttäjän syötteen kiloina, ja muuntaa sen paunoiksi.
+     * Metodi tulkitsee käyttäjän syötteen kiloina, muuntaa sen paunoiksi
+     * ja palauttaa sen.
      * 
      * @param kilot käyttäjän söyttämä paino
      * 

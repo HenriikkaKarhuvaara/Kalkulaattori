@@ -6,9 +6,8 @@ package fi.henriikka.sovelluslogiikka;
 public class Summa extends PerusToiminto {
 
     /**
-     * Metodi laskee annettujen parametrien summan
-     * Asettaa yläluokan parametrille tulos tämän arvon
-     * Palauttaa sen.
+     * Metodi laskee annettujen parametrien summa, asettaa yläluokan
+     * parametrille tulos tämän arvon ja palauttaa sen.
      *
      * @param x Käyttäjän antama syöte
      * @param y Käyttäjän antama syöte

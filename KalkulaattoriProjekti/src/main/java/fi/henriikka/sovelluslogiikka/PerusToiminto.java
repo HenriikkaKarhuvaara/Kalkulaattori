@@ -1,9 +1,10 @@
+
+package fi.henriikka.sovelluslogiikka;
+
 /**
  * Luokka on abstrakti yläluokka kaikille laskimen perustoiminnoille: 
  * summa, erotus, tulo, osamaara ja nollaus.
  */
-package fi.henriikka.sovelluslogiikka;
-
 public abstract class PerusToiminto {
 
     public double tulos;

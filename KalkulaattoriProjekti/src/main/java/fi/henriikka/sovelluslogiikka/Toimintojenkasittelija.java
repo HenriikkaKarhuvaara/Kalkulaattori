@@ -4,12 +4,10 @@ import java.util.Date;
 import java.util.HashMap;
 
 /**
- * Luokka toimii välikätenä tapahtumankuuntelijalle Etsii oikean laskimen
- * perustoiminnon sen nimen avulla Suorittaa oikean laskutoimituksen tai nollaa
- * laskimen
- *
- * Lisäksi käsittelee lisätoimintoja: Muisti, päivämäärä, pituusmuunnin ja
- * painomuunnin Suorittaa niille oikean toiminnon.
+ * Luokka toimii välikätenä tapahtumankuuntelijalle, etsii oikean laskimen
+ * perustoiminnon sen nimen avulla, suorittaa oikean laskutoimituksen tai nollaa
+ * laskimen, lisäksi käsittelee lisätoimintoja: Muisti, päivämäärä, pituusmuunnin ja
+ * painomuunnin ja suorittaa niille oikean toiminnon.
  */
 public class Toimintojenkasittelija {
 
@@ -35,14 +33,15 @@ public class Toimintojenkasittelija {
      * @param x Käyttäjän antama syöte
      * @param y Käyttäjän antama syöte
      *
-     * @return Oikean toiminnon laskutoimituksen tulos tai nolla
+     * @return Oikean toiminnon laskutoimituksen tulos
      */
     public double suoritaPerustoiminto(String toiminnonNimi, double x, double y) {
         return perustoimintojenKasittelija.get(toiminnonNimi).suoritaToiminto(x, y);
     }
 
     /**
-     * Kutsuu luokan PaivamaaraLaskuri metodia laskePaivamaarien ero Siis laskee
+     * Kutsuu luokan PaivamaaraLaskuri metodia laskePaivamaarien ero, siis 
+     * palauttaa
      * parametrina annettujen päivämäärien eron.
      *
      * @param x ensimmäinen päivämäärä
@@ -68,7 +67,7 @@ public class Toimintojenkasittelija {
      * Hakee tallennetun vastauksen, eli palauttaa luokan Muisti vastauksen
      * arvon.
      *
-     * @return Luokan Muisti vastauksen arvo
+     * @return Luokan Muisti parametrin vastaus arvo
      */
     public double annaViimeisinVastaus() {
         return muisti.getVastaus();

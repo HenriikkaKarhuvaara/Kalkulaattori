@@ -12,8 +12,7 @@ public class Main {
     public static void main(String[] args) {
 
         SwingUtilities.invokeLater(new Kayttoliittyma());
-//PaivamaaraLaskuri o = new PaivamaaraLaskuri();
-//o.laskePaivamaarienEro("26 08 1995", "04 01 2016");
+
     }
 
 }

@@ -13,9 +13,8 @@ public class Osamaara extends PerusToiminto {
 
     /**
      * Metodi laskee annettujen parametrien osamaaran, jos jakaja ei ole nolla,
-     * ja palauttaa sen arvon
-     * Asettaa sen yläluokan parametrin tulos arvoksi
-     * Jos jakaja on nolla, kertoo metodi, että
+     * ja palauttaa sen arvon, asettaa sen yläluokan parametrin tulos arvoksi,
+     * jos jakaja on nolla, kertoo metodi, että
      * jakaminen ei onnistu asettamalla booleanin onnistuikoJako arvoksi false.
      *
      * @param x Käyttäjän antama syöte
