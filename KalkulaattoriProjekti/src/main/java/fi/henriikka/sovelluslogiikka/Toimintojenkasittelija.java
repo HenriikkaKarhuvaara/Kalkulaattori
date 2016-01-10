@@ -45,8 +45,8 @@ public class Toimintojenkasittelija {
      * Kutsuu luokan PaivamaaraLaskuri metodia laskePaivamaarien ero Siis laskee
      * parametrina annettujen päivämäärien eron.
      *
-     * @param x
-     * @param y
+     * @param x ensimmäinen päivämäärä
+     * @param y toinen päivämäärä
      *
      * @return päivämäärien ero päivinä
      */
@@ -81,7 +81,7 @@ public class Toimintojenkasittelija {
      * Muuttaa annetun arvon tuumiksi kutsumalla luokan SentitJaTuumat oikeaa
      * metodia.
      *
-     * @param cm
+     * @param cm muunnettava pituus sentteinä
      *
      * @return annettu arvo tuumina
      */
@@ -93,7 +93,7 @@ public class Toimintojenkasittelija {
      * Muuttaa annetun arvon senteiksi kutsumalla luokan SentitJaTuumat oikeaa
      * metodia.
      *
-     * @param inch
+     * @param inch muunnettava pituus tuumina
      *
      * @return annettu arvo sentteinä
      */
@@ -105,7 +105,7 @@ public class Toimintojenkasittelija {
      * Muuttaa annetun arvon kiloiksi kutsumalla luokan PaunatJaKilot oikeaa
      * metodia.
      *
-     * @param pounds
+     * @param pounds muuttettava paino paunoina
      *
      * @return annettu arvo kiloina
      */
@@ -117,7 +117,7 @@ public class Toimintojenkasittelija {
      * Muuttaa annetun arvon paunoiksi kutsumalla luokan PaunatJaKilot oikeaa
      * metodia.
      *
-     * @param kilot
+     * @param kilot muunnettava paino kiloina
      *
      * @return annettu arvo paunoina
      */

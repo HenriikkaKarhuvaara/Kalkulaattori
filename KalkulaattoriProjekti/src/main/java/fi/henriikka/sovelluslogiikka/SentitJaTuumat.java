@@ -12,7 +12,7 @@ public class SentitJaTuumat {
     /**
      * Metodi tulkitsee käyttäjän syötteen sentteinä, ja muuntaa sen tuumiksi.
      * 
-     * @param cm
+     * @param cm käyttäjän syöttämä pituus
      * 
      * @return Käyttäjän antama syöte tuumina
      */
@@ -27,7 +27,7 @@ public class SentitJaTuumat {
     /** 
      * Metodi tulkitsee käyttäjän syötteen tuumina, ja muuntaa sen senteiksi.
      * 
-     * @param inch
+     * @param inch käyttäjän syöttämä pituus
      * 
      * @return Käyttäjän antama syöte sentteinä
      */

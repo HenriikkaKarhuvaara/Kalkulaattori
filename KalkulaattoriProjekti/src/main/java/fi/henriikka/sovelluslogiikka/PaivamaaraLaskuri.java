@@ -18,8 +18,8 @@ public class PaivamaaraLaskuri {
      * Metodi muuttaa käyttäjän antamat tekstijonot päivämääräolioiksi Laskee
      * päivämäärien erotuksen päivinä Palauttaa vastauksen
      *
-     * @param x
-     * @param y
+     * @param x ensimmäinen päivämäärä
+     * @param y toinen päivämäärä
      *
      * @return Päivämäärien erotus päivinä
      */

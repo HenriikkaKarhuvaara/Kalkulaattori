@@ -13,11 +13,11 @@ public class PaunatJaKilot {
     /**
      * Metodi tulkitsee käyttäjän syötteen paunoina, ja muuntaa sen kiloiksi.
      * 
-     * @param pounds
+     * @param paunat käyttäjän syöttämä paino
      * 
      * @return Käyttäjän syöte muunnettuna kiloiksi
      */
-    public double paunatKiloiksi(double paunat){
+    public double paunatKiloiksi(double paunat) {
         
         this.kilot = paunat / 2.2046;
         return this.kilot;
@@ -27,7 +27,7 @@ public class PaunatJaKilot {
      /**
      * Metodi tulkitsee käyttäjän syötteen kiloina, ja muuntaa sen paunoiksi.
      * 
-     * @param kilot
+     * @param kilot käyttäjän söyttämä paino
      * 
      * @return Käyttäjän syöte muunnettuna paunoiksi
      */
