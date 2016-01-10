@@ -17,4 +17,4 @@ Käyttöliittymää ei ilmeisesti olisi tarvinnut testata, mutta OTM-kurssilta j
 
 Laskinta käyttäessä kuitenkin näyttäisi siltä, että testaamattakin jääneet osiot toimisivat halutusti.
 
-- Jar-tiedostoa en saanut millään toimimaan, vaikka yritin mielestäni vaikka mitä versioita luokan nimestä: kalkulaattori.main, fi.henriikka.kalkulaattori.main, main.java jne.
+
